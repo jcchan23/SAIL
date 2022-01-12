@@ -63,7 +63,7 @@ This result could be refered from [MolRep](https://github.com/biomed-AI/MolRep).
 |CMPNN    |0.985±0.021|0.859±0.008|-          |0.658±0.002|0.917±0.006|-          |-          |-          |
 |CMPNN-dgl|0.969±0.008|0.852±0.008|0.757±0.008|0.649±0.013|0.935±0.038|0.562±0.031|0.945±0.094|0.575±0.025|
 
-*Note*
+*Note:*
 
 *(1) GC=Graph Classification, GR=Graph Regression*
 
