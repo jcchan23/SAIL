@@ -219,3 +219,4 @@ if __name__ == "__main__":
     labels = data.iloc[:,1:].values.tolist()
     build_dgl_graph(smiles, labels, result_path, mode="toxcast")
 
+

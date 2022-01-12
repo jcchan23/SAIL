@@ -35,8 +35,6 @@ parser.add_argument('--batch_size', type=int, default=50,
                     help='The batch size')
 parser.add_argument('--result_path', type=str, default='./result',
                     help='The name of result path, for logs, predictions, best models, etc.')
-parser.add_argument('--total_folds', type=int, default=5,
-                    help='The total folds in cv')
 parser.add_argument('--run_fold', type=int, default=0,
                     help='The parallel running fold')
 # dataset setting
@@ -96,7 +94,7 @@ if __name__ == '__main__':
             train_smiles, valid_smiles, test_smiles = random_split(smiles, frac=[0.8, 0.1, 0.1], random_state=args.seed)
         # cv split with valid == test           
         elif args.split_type == 'cv':
-            kf = KFold(n_splits=args.total_folds, shuffle=True, random_state=args.seed)
+            kf = KFold(n_splits=5, shuffle=True, random_state=args.seed)
             for idx, (train_index, test_index) in enumerate(kf.split(smiles)):
                 train_smiles, test_smiles = np.array(smiles)[train_index].tolist(), np.array(smiles)[test_index].tolist()
                 # use pickle instead of txt since there are various smiles that correspond to the same molecule
