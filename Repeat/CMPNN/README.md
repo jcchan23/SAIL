@@ -6,6 +6,8 @@ The original implementation of CMPNN could be referred at [CMPNN](https://github
 
 The IJCAI 2020 paper could be referred at [Communicative Representation Learning on Attributed Molecular Graphs](https://www.ijcai.org/Proceedings/2020/0392.pdf).
 
+**Notes: Since the limitation of dgl, we could not implement the reverse edge in the model. The original calculation could be found in the paper Algorithm 1 line 8, so we delete the minus of reverse edge as the substitution and find it will not cause performance decrease a lot.**
+
 ## Dependencies
 + cuda == 10.2
 + cudnn == 7.6.5
