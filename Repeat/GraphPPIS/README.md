@@ -1,35 +1,130 @@
-# GraphPPIS  
-GraphPPIS is a novel framework for structure-based protein-protein interaction site prediction using deep graph convolutional network via initial residual and identity mapping, which is able to capture information from high-order spatially neighboring amino acids.
+# GraphPPIS-dgl
 
-# System requirement  
-GraphPPIS is developed under Linux environment with:  
-python  3.7.7  
-numpy  1.19.1  
-pandas  1.1.0  
-torch  1.6.0  
-scikit-learn  0.23.2  
+Reimplementation of the GraphPPIS model by using dgl.
 
-# Dataset and Feature  
-The datasets used in this study (Train_335, Test_60, Test_331 and UBtest_31) are stored in ./Dataset in python dictionary format:  
-```
-Dataset[ID] = [seq, label]
-```
-The distance maps(L * L) and normalized feature matrixes PSSM(L * 20), HMM(L * 20) and DSSP(L * 14) are stored in ./Feature in numpy format.  
+The original implementation could be referred at [GraphPPIS](https://github.com/yuanqm55/GraphPPIS) and [GraphPPIS-web](https://github.com/biomed-AI/GraphPPIS).
 
-# Running GraphPPIS  
-Train the model with default parameters:  
-```
-python train.py
-```  
-Test the model you just trained on the three test sets:  
-```
-python test.py
-```
-You can adjust the parameters via GraphPPIS_model.py  
-The pre-trained GraphPPIS model and the simplified version using BLOSUM62 can be found under ./Model  
+The web server is freely available at [https://biomed.nscc-gz.cn:9094/apps/GraphPPIS](https://biomed.nscc-gz.cn:9094/apps/GraphPPIS).
 
-# Web server and contact  
-The GraphPPIS web server is freely available at [https://biomed.nscc-gz.cn:9094/apps/GraphPPIS](https://biomed.nscc-gz.cn:9094/apps/GraphPPIS)  
-Contact:  
-Qianmu Yuan (yuanqm3@mail2.sysu.edu.cn)  
-Yuedong Yang (yangyd25@mail.sysu.edu.cn)
+The Bioinformatics paper could be refered at [Structure-aware protein–protein interaction site prediction using deep graph convolutional network](https://doi.org/10.1093/bioinformatics/btab643).
+
+![GraphPPIS_framkwork](./framework.png)
+
+## Dependencies
++ cuda == 10.2
++ cudnn == 7.6.5
++ dgl-cu10.2 == 0.7.2
++ numpy == 1.19.1
++ pandas == 1.1.0
++ python == 3.7.7
++ scikit-learn == 0.23.2
++ torch == 1.8.1
++ tqdm == 4.48.2
+
+## Overview
+
+*1. Statistics of the three benchmark datasets along with the training and test sets used in this study*
+
+|Dataset|Interacting residues|Non-interacting residues|% of interacting residues|
+|:---:  |:---:               |:---:                   |:---:                    |
+|Dset_186|5517|30702|15.23|
+|Dset_72 |1923|16217|10.60|
+|Dset_164|6096|27585|18.10|
+|Train_335|10374|55992|15.63|
+|Test_60 |2075|11069|15.79|
+|Test_315|9355|55976|14.32|
+|UBtest_31|841|5813 |12.64|
+
+*2. Performance comparision on AUROC*
+|Method|5-fold CV|Test315|Test60|Btest31|UBTest31|
+|:---: |:---:| :---:| :---:| :---:| :---: |
+|GraphPPIS    |0.783±0.002|0.790|0.786|0.780|0.750|
+|GraphPPIS-dgl|0.771±0.012|0.792±0.004|0.773±0.006|0.785±0.008|0.749±0.009|
+
+*3. Performance comparision on AUPRC*
+|Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
+|:---: |:---:| :---:| :---:| :---:| :---: |
+|GraphPPIS    |0.423±0.003|0.423|0.429|0.395|0.323|
+|GraphPPIS-dgl|0.410±0.024|0.406±0.008|0.405±0.005|0.371±0.005|0.291±0.011|
+
+*4. Performance comparision on MCC*
+|Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
+|:---: |:---:| :---:| :---:| :---:| :---: |
+|GraphPPIS    |0.324±0.011|0.336|0.333|0.328|0.280|
+|GraphPPIS-dgl|0.310±0.020|0.326±0.006|0.315±0.007|0.316±0.011|0.270±0.014|
+
+*Note*
+
+*(1) Since the small size of samples, performance will fluctuate 1 to 2 points in each dataset, especially in the BTest31 and UBTest31 dataset.*
+
+*(2) The model may need to more works on tuning the hyper-parameters or other tricks.*
+
+## Running
+
+To reproduce all the results, run firstly:
+
+`python dataset.py`
+
+it will generate a pickle file in the `data/preprocess` with the same dataset name, this pickle file contain 4 objects:
+
++ `names_list:` All protein names in the dataset.
++ `sequences_dict:` Unique protein names -> protein sequence.
++ `graphs_dict:` Unique protein names -> dgl graph object.
++ `labels_dict:` Unique protein names -> label list.
+
+Then run:
+
+`python run.py --gpu <gpu id> --run_fold <fold_num>`
+
++ `<gpu id>` is the gpu id.
++ `<fold_num>` is the fold number, you must choose fold number from `[1, 2, 3, 4, 5]` since the 5-fold cv.
+
+Others parameters could be refered in the `run.py`.
+
+After running the code, it will create a folder with the format `seed_<args.seed>` in the `./result/` folder, the folder will contain:
+
+```
+result/
+└── seed_2021
+    ├── GraphPPIS_fold_1.ckpt
+    ├── GraphPPIS_fold_1.txt
+    ├── GraphPPIS_fold_2.ckpt
+    ├── GraphPPIS_fold_2.txt
+    ├── GraphPPIS_fold_3.ckpt
+    ├── GraphPPIS_fold_3.txt
+    ├── GraphPPIS_fold_4.ckpt
+    ├── GraphPPIS_fold_4.txt
+    ├── GraphPPIS_fold_5.ckpt
+    ├── GraphPPIS_fold_5.txt
+    ├── train_fold_1.txt
+    ├── train_fold_2.txt
+    ├── train_fold_3.txt
+    ├── train_fold_4.txt
+    ├── train_fold_5.txt
+    ├── valid_fold_1.txt
+    ├── valid_fold_2.txt
+    ├── valid_fold_3.txt
+    ├── valid_fold_4.txt
+    └── valid_fold_5.txt
+```
+
+## Citation:
+
+Please cite the following paper if you use this code in your work.
+```bibtex
+@article{10.1093/bioinformatics/btab643,
+    author = {Yuan, Qianmu and Chen, Jianwen and Zhao, Huiying and Zhou, Yaoqi and Yang, Yuedong},
+    title = "{Structure-aware protein–protein interaction site prediction using deep graph convolutional network}",
+    journal = {Bioinformatics},
+    volume = {38},
+    number = {1},
+    pages = {125-132},
+    year = {2021},
+    month = {09},
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btab643},
+    url = {https://doi.org/10.1093/bioinformatics/btab643},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/38/1/125/41890956/btab643.pdf},
+}
+```
+
