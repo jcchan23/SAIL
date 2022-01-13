@@ -1,0 +1,156 @@
+epoch: 1
+train: accuracy: 0.8331   auprc: 0.1782   auroc: 0.5478   f1: 0.0321   loss: 0.5301   mcc: 0.0071   precision: 0.1773   recall: 0.0176   threshold: 0.5000   
+valid: accuracy: 0.5932   auprc: 0.2149   auroc: 0.6161   f1: 0.3023   loss: 0.5119   mcc: 0.1231   precision: 0.2055   recall: 0.5715   threshold: 0.1600   
+epoch: 2
+train: accuracy: 0.8425   auprc: 0.2044   auroc: 0.5867   f1: 0.0071   loss: 0.4954   mcc: 0.0185   precision: 0.3158   recall: 0.0036   threshold: 0.5000   
+valid: accuracy: 0.5645   auprc: 0.2390   auroc: 0.6501   f1: 0.3213   loss: 0.4937   mcc: 0.1546   precision: 0.2115   recall: 0.6685   threshold: 0.2100   
+epoch: 3
+train: accuracy: 0.8434   auprc: 0.2413   auroc: 0.6230   f1: 0.0149   loss: 0.4817   mcc: 0.0501   precision: 0.5478   recall: 0.0076   threshold: 0.5000   
+valid: accuracy: 0.6659   auprc: 0.2527   auroc: 0.6749   f1: 0.3389   loss: 0.4930   mcc: 0.1827   precision: 0.2439   recall: 0.5553   threshold: 0.1700   
+epoch: 4
+train: accuracy: 0.8430   auprc: 0.2666   auroc: 0.6554   f1: 0.0442   loss: 0.4711   mcc: 0.0795   precision: 0.4923   recall: 0.0232   threshold: 0.5000   
+valid: accuracy: 0.6081   auprc: 0.2546   auroc: 0.6820   f1: 0.3427   loss: 0.4840   mcc: 0.1896   precision: 0.2311   recall: 0.6626   threshold: 0.1700   
+epoch: 5
+train: accuracy: 0.8433   auprc: 0.2675   auroc: 0.6573   f1: 0.0448   loss: 0.4728   mcc: 0.0830   precision: 0.5118   recall: 0.0234   threshold: 0.5000   
+valid: accuracy: 0.6894   auprc: 0.2732   auroc: 0.6939   f1: 0.3499   loss: 0.4771   mcc: 0.1995   precision: 0.2583   recall: 0.5421   threshold: 0.2400   
+epoch: 6
+train: accuracy: 0.8433   auprc: 0.2728   auroc: 0.6709   f1: 0.0584   loss: 0.4678   mcc: 0.0943   precision: 0.5049   recall: 0.0310   threshold: 0.5000   
+valid: accuracy: 0.5780   auprc: 0.2607   auroc: 0.6737   f1: 0.3377   loss: 0.4940   mcc: 0.1835   precision: 0.2228   recall: 0.6978   threshold: 0.2600   
+epoch: 7
+train: accuracy: 0.8431   auprc: 0.2869   auroc: 0.6813   f1: 0.0640   loss: 0.4646   mcc: 0.0976   precision: 0.4965   recall: 0.0342   threshold: 0.5000   
+valid: accuracy: 0.7076   auprc: 0.2843   auroc: 0.6918   f1: 0.3503   loss: 0.4699   mcc: 0.2015   precision: 0.2665   recall: 0.5113   threshold: 0.2300   
+epoch: 8
+train: accuracy: 0.8429   auprc: 0.2918   auroc: 0.6854   f1: 0.0877   loss: 0.4598   mcc: 0.1149   precision: 0.4914   recall: 0.0481   threshold: 0.5000   
+valid: accuracy: 0.6896   auprc: 0.2757   auroc: 0.6960   f1: 0.3517   loss: 0.4715   mcc: 0.2019   precision: 0.2594   recall: 0.5460   threshold: 0.2100   
+epoch: 9
+train: accuracy: 0.8443   auprc: 0.3113   auroc: 0.6977   f1: 0.1098   loss: 0.4550   mcc: 0.1395   precision: 0.5307   recall: 0.0612   threshold: 0.5000   
+valid: accuracy: 0.6446   auprc: 0.2777   auroc: 0.6941   f1: 0.3509   loss: 0.4786   mcc: 0.2007   precision: 0.2442   recall: 0.6229   threshold: 0.2500   
+epoch: 10
+train: accuracy: 0.8451   auprc: 0.3225   auroc: 0.7071   f1: 0.1000   loss: 0.4529   mcc: 0.1394   precision: 0.5642   recall: 0.0548   threshold: 0.5000   
+valid: accuracy: 0.6597   auprc: 0.2961   auroc: 0.7034   f1: 0.3601   loss: 0.4676   mcc: 0.2143   precision: 0.2535   recall: 0.6210   threshold: 0.2400   
+epoch: 11
+train: accuracy: 0.8454   auprc: 0.3250   auroc: 0.7074   f1: 0.1310   loss: 0.4507   mcc: 0.1600   precision: 0.5537   recall: 0.0743   threshold: 0.5000   
+valid: accuracy: 0.6739   auprc: 0.3011   auroc: 0.7154   f1: 0.3659   loss: 0.4626   mcc: 0.2225   precision: 0.2613   recall: 0.6102   threshold: 0.2100   
+epoch: 12
+train: accuracy: 0.8454   auprc: 0.3312   auroc: 0.7148   f1: 0.1317   loss: 0.4474   mcc: 0.1602   precision: 0.5523   recall: 0.0748   threshold: 0.5000   
+valid: accuracy: 0.7001   auprc: 0.2952   auroc: 0.7147   f1: 0.3627   loss: 0.4620   mcc: 0.2177   precision: 0.2698   recall: 0.5534   threshold: 0.2300   
+epoch: 13
+train: accuracy: 0.8441   auprc: 0.3086   auroc: 0.6950   f1: 0.1444   loss: 0.4522   mcc: 0.1604   precision: 0.5182   recall: 0.0839   threshold: 0.5000   
+valid: accuracy: 0.7340   auprc: 0.2888   auroc: 0.7062   f1: 0.3571   loss: 0.4776   mcc: 0.2138   precision: 0.2846   recall: 0.4789   threshold: 0.1900   
+epoch: 14
+train: accuracy: 0.8439   auprc: 0.3237   auroc: 0.7111   f1: 0.1290   loss: 0.4471   mcc: 0.1494   precision: 0.5155   recall: 0.0737   threshold: 0.5000   
+valid: accuracy: 0.6921   auprc: 0.2948   auroc: 0.7120   f1: 0.3666   loss: 0.4615   mcc: 0.2231   precision: 0.2685   recall: 0.5779   threshold: 0.2100   
+epoch: 15
+train: accuracy: 0.8452   auprc: 0.3205   auroc: 0.7012   f1: 0.1198   loss: 0.4507   mcc: 0.1517   precision: 0.5523   recall: 0.0672   threshold: 0.5000   
+valid: accuracy: 0.7271   auprc: 0.3082   auroc: 0.7241   f1: 0.3747   loss: 0.4577   mcc: 0.2354   precision: 0.2897   recall: 0.5304   threshold: 0.2500   
+epoch: 16
+train: accuracy: 0.8455   auprc: 0.3459   auroc: 0.7260   f1: 0.1592   loss: 0.4396   mcc: 0.1768   precision: 0.5434   recall: 0.0933   threshold: 0.5000   
+valid: accuracy: 0.7313   auprc: 0.3173   auroc: 0.7289   f1: 0.3814   loss: 0.4615   mcc: 0.2443   precision: 0.2956   recall: 0.5372   threshold: 0.2800   
+epoch: 17
+train: accuracy: 0.8454   auprc: 0.3272   auroc: 0.7084   f1: 0.1405   loss: 0.4438   mcc: 0.1655   precision: 0.5491   recall: 0.0805   threshold: 0.5000   
+valid: accuracy: 0.7172   auprc: 0.3138   auroc: 0.7310   f1: 0.3817   loss: 0.4504   mcc: 0.2442   precision: 0.2879   recall: 0.5661   threshold: 0.2200   
+epoch: 18
+train: accuracy: 0.8474   auprc: 0.3544   auroc: 0.7312   f1: 0.1839   loss: 0.4360   mcc: 0.2006   precision: 0.5710   recall: 0.1096   threshold: 0.5000   
+valid: accuracy: 0.7567   auprc: 0.3206   auroc: 0.7322   f1: 0.3804   loss: 0.4554   mcc: 0.2463   precision: 0.3132   recall: 0.4843   threshold: 0.2800   
+epoch: 19
+train: accuracy: 0.8476   auprc: 0.3615   auroc: 0.7368   f1: 0.1832   loss: 0.4340   mcc: 0.2012   precision: 0.5747   recall: 0.1090   threshold: 0.5000   
+valid: accuracy: 0.7575   auprc: 0.3274   auroc: 0.7345   f1: 0.3917   loss: 0.4514   mcc: 0.2601   precision: 0.3193   recall: 0.5064   threshold: 0.2500   
+epoch: 20
+train: accuracy: 0.8479   auprc: 0.3562   auroc: 0.7304   f1: 0.1812   loss: 0.4366   mcc: 0.2016   precision: 0.5817   recall: 0.1073   threshold: 0.5000   
+valid: accuracy: 0.7336   auprc: 0.3225   auroc: 0.7351   f1: 0.3905   loss: 0.4553   mcc: 0.2564   precision: 0.3017   recall: 0.5534   threshold: 0.2600   
+epoch: 21
+train: accuracy: 0.8456   auprc: 0.3561   auroc: 0.7354   f1: 0.1737   loss: 0.4335   mcc: 0.1859   precision: 0.5415   recall: 0.1035   threshold: 0.5000   
+valid: accuracy: 0.6794   auprc: 0.3097   auroc: 0.7324   f1: 0.3848   loss: 0.4517   mcc: 0.2510   precision: 0.2733   recall: 0.6503   threshold: 0.1900   
+epoch: 22
+train: accuracy: 0.8474   auprc: 0.3592   auroc: 0.7367   f1: 0.1863   loss: 0.4335   mcc: 0.2020   precision: 0.5700   recall: 0.1114   threshold: 0.5000   
+valid: accuracy: 0.7481   auprc: 0.3229   auroc: 0.7290   f1: 0.3836   loss: 0.4513   mcc: 0.2488   precision: 0.3080   recall: 0.5083   threshold: 0.2600   
+epoch: 23
+train: accuracy: 0.8473   auprc: 0.3618   auroc: 0.7341   f1: 0.1985   loss: 0.4331   mcc: 0.2079   precision: 0.5622   recall: 0.1205   threshold: 0.5000   
+valid: accuracy: 0.7426   auprc: 0.3320   auroc: 0.7389   f1: 0.3982   loss: 0.4692   mcc: 0.2670   precision: 0.3113   recall: 0.5524   threshold: 0.3200   
+epoch: 24
+train: accuracy: 0.8477   auprc: 0.3692   auroc: 0.7452   f1: 0.1783   loss: 0.4293   mcc: 0.1993   precision: 0.5799   recall: 0.1054   threshold: 0.5000   
+valid: accuracy: 0.7460   auprc: 0.3364   auroc: 0.7506   f1: 0.4069   loss: 0.4413   mcc: 0.2786   precision: 0.3179   recall: 0.5651   threshold: 0.2100   
+epoch: 25
+train: accuracy: 0.8477   auprc: 0.3674   auroc: 0.7432   f1: 0.2136   loss: 0.4298   mcc: 0.2177   precision: 0.5616   recall: 0.1319   threshold: 0.5000   
+valid: accuracy: 0.7313   auprc: 0.3385   auroc: 0.7415   f1: 0.4013   loss: 0.4488   mcc: 0.2711   precision: 0.3057   recall: 0.5842   threshold: 0.2600   
+epoch: 26
+train: accuracy: 0.8490   auprc: 0.3848   auroc: 0.7527   f1: 0.2252   loss: 0.4218   mcc: 0.2297   precision: 0.5769   recall: 0.1399   threshold: 0.5000   
+valid: accuracy: 0.7469   auprc: 0.3360   auroc: 0.7515   f1: 0.4099   loss: 0.4521   mcc: 0.2825   precision: 0.3200   recall: 0.5700   threshold: 0.1600   
+epoch: 27
+train: accuracy: 0.8496   auprc: 0.3816   auroc: 0.7480   f1: 0.2171   loss: 0.4229   mcc: 0.2283   precision: 0.5909   recall: 0.1330   threshold: 0.5000   
+valid: accuracy: 0.7536   auprc: 0.3393   auroc: 0.7534   f1: 0.4109   loss: 0.4492   mcc: 0.2840   precision: 0.3254   recall: 0.5573   threshold: 0.1700   
+epoch: 28
+train: accuracy: 0.8500   auprc: 0.3934   auroc: 0.7549   f1: 0.2424   loss: 0.4221   mcc: 0.2426   precision: 0.5825   recall: 0.1530   threshold: 0.5000   
+valid: accuracy: 0.7421   auprc: 0.3367   auroc: 0.7437   f1: 0.4020   loss: 0.4601   mcc: 0.2720   precision: 0.3129   recall: 0.5622   threshold: 0.1400   
+epoch: 29
+train: accuracy: 0.8484   auprc: 0.3867   auroc: 0.7544   f1: 0.2043   loss: 0.4209   mcc: 0.2163   precision: 0.5783   recall: 0.1241   threshold: 0.5000   
+valid: accuracy: 0.7270   auprc: 0.3401   auroc: 0.7495   f1: 0.4057   loss: 0.4567   mcc: 0.2773   precision: 0.3053   recall: 0.6043   threshold: 0.1500   
+epoch: 30
+train: accuracy: 0.8494   auprc: 0.3904   auroc: 0.7555   f1: 0.2298   loss: 0.4200   mcc: 0.2340   precision: 0.5814   recall: 0.1432   threshold: 0.5000   
+valid: accuracy: 0.7535   auprc: 0.3349   auroc: 0.7565   f1: 0.4096   loss: 0.4426   mcc: 0.2823   precision: 0.3247   recall: 0.5544   threshold: 0.2000   
+epoch: 31
+train: accuracy: 0.8506   auprc: 0.3951   auroc: 0.7629   f1: 0.2389   loss: 0.4178   mcc: 0.2437   precision: 0.5939   recall: 0.1495   threshold: 0.5000   
+valid: accuracy: 0.7678   auprc: 0.3423   auroc: 0.7548   f1: 0.4119   loss: 0.4375   mcc: 0.2864   precision: 0.3379   recall: 0.5274   threshold: 0.2300   
+epoch: 32
+train: accuracy: 0.8488   auprc: 0.3913   auroc: 0.7592   f1: 0.2406   loss: 0.4180   mcc: 0.2367   precision: 0.5663   recall: 0.1528   threshold: 0.5000   
+valid: accuracy: 0.7375   auprc: 0.3297   auroc: 0.7525   f1: 0.4056   loss: 0.4393   mcc: 0.2768   precision: 0.3116   recall: 0.5808   threshold: 0.2600   
+epoch: 33
+train: accuracy: 0.8487   auprc: 0.3930   auroc: 0.7645   f1: 0.2321   loss: 0.4174   mcc: 0.2319   precision: 0.5688   recall: 0.1458   threshold: 0.5000   
+valid: accuracy: 0.7418   auprc: 0.3416   auroc: 0.7622   f1: 0.4178   loss: 0.4343   mcc: 0.2934   precision: 0.3203   recall: 0.6009   threshold: 0.2000   
+epoch: 34
+train: accuracy: 0.8489   auprc: 0.4042   auroc: 0.7692   f1: 0.2408   loss: 0.4105   mcc: 0.2373   precision: 0.5680   recall: 0.1528   threshold: 0.5000   
+valid: accuracy: 0.7382   auprc: 0.3355   auroc: 0.7557   f1: 0.4091   loss: 0.4357   mcc: 0.2815   precision: 0.3137   recall: 0.5877   threshold: 0.2200   
+epoch: 35
+train: accuracy: 0.8489   auprc: 0.3924   auroc: 0.7640   f1: 0.2570   loss: 0.4183   mcc: 0.2460   precision: 0.5619   recall: 0.1666   threshold: 0.5000   
+valid: accuracy: 0.7236   auprc: 0.3383   auroc: 0.7528   f1: 0.3997   loss: 0.4608   mcc: 0.2692   precision: 0.3005   recall: 0.5970   threshold: 0.1500   
+epoch: 36
+train: accuracy: 0.8511   auprc: 0.4065   auroc: 0.7665   f1: 0.2435   loss: 0.4135   mcc: 0.2485   precision: 0.5999   recall: 0.1528   threshold: 0.5000   
+valid: accuracy: 0.7373   auprc: 0.3291   auroc: 0.7515   f1: 0.4088   loss: 0.4415   mcc: 0.2812   precision: 0.3130   recall: 0.5891   threshold: 0.2200   
+epoch: 37
+train: accuracy: 0.8485   auprc: 0.3936   auroc: 0.7590   f1: 0.2401   loss: 0.4166   mcc: 0.2353   precision: 0.5631   recall: 0.1525   threshold: 0.5000   
+valid: accuracy: 0.7444   auprc: 0.3315   auroc: 0.7474   f1: 0.4020   loss: 0.4490   mcc: 0.2721   precision: 0.3145   recall: 0.5573   threshold: 0.2100   
+epoch: 38
+train: accuracy: 0.8510   auprc: 0.4136   auroc: 0.7698   f1: 0.2533   loss: 0.4067   mcc: 0.2526   precision: 0.5916   recall: 0.1612   threshold: 0.5000   
+valid: accuracy: 0.7474   auprc: 0.3465   auroc: 0.7604   f1: 0.4200   loss: 0.4367   mcc: 0.2961   precision: 0.3251   recall: 0.5930   threshold: 0.2200   
+epoch: 39
+train: accuracy: 0.8503   auprc: 0.4057   auroc: 0.7645   f1: 0.2669   loss: 0.4136   mcc: 0.2568   precision: 0.5760   recall: 0.1737   threshold: 0.5000   
+valid: accuracy: 0.7230   auprc: 0.3493   auroc: 0.7606   f1: 0.4137   loss: 0.4349   mcc: 0.2892   precision: 0.3071   recall: 0.6337   threshold: 0.2200   
+epoch: 40
+train: accuracy: 0.8516   auprc: 0.4099   auroc: 0.7676   f1: 0.2578   loss: 0.4125   mcc: 0.2576   precision: 0.5983   recall: 0.1643   threshold: 0.5000   
+valid: accuracy: 0.7180   auprc: 0.3342   auroc: 0.7538   f1: 0.4055   loss: 0.4383   mcc: 0.2779   precision: 0.3004   recall: 0.6239   threshold: 0.2100   
+epoch: 41
+train: accuracy: 0.8519   auprc: 0.4211   auroc: 0.7753   f1: 0.2682   loss: 0.4077   mcc: 0.2637   precision: 0.5956   recall: 0.1731   threshold: 0.5000   
+valid: accuracy: 0.7207   auprc: 0.3281   auroc: 0.7451   f1: 0.4037   loss: 0.4454   mcc: 0.2749   precision: 0.3009   recall: 0.6131   threshold: 0.2000   
+epoch: 42
+train: accuracy: 0.8530   auprc: 0.4249   auroc: 0.7724   f1: 0.2869   loss: 0.4057   mcc: 0.2773   precision: 0.5996   recall: 0.1886   threshold: 0.5000   
+valid: accuracy: 0.7251   auprc: 0.3287   auroc: 0.7480   f1: 0.4005   loss: 0.4418   mcc: 0.2702   precision: 0.3017   recall: 0.5955   threshold: 0.2700   
+epoch: 43
+train: accuracy: 0.8519   auprc: 0.4214   auroc: 0.7740   f1: 0.2838   loss: 0.4067   mcc: 0.2715   precision: 0.5874   recall: 0.1871   threshold: 0.5000   
+valid: accuracy: 0.7155   auprc: 0.3418   auroc: 0.7550   f1: 0.4124   loss: 0.4561   mcc: 0.2883   precision: 0.3026   recall: 0.6474   threshold: 0.3000   
+epoch: 44
+train: accuracy: 0.8518   auprc: 0.4217   auroc: 0.7726   f1: 0.2725   loss: 0.4072   mcc: 0.2655   precision: 0.5924   recall: 0.1769   threshold: 0.5000   
+valid: accuracy: 0.7381   auprc: 0.3514   auroc: 0.7515   f1: 0.4053   loss: 0.4392   mcc: 0.2765   precision: 0.3119   recall: 0.5788   threshold: 0.2100   
+epoch: 45
+train: accuracy: 0.8518   auprc: 0.4224   auroc: 0.7772   f1: 0.2767   loss: 0.4042   mcc: 0.2676   precision: 0.5899   recall: 0.1807   threshold: 0.5000   
+valid: accuracy: 0.7025   auprc: 0.3260   auroc: 0.7485   f1: 0.4028   loss: 0.4431   mcc: 0.2758   precision: 0.2917   recall: 0.6508   threshold: 0.2200   
+epoch: 46
+train: accuracy: 0.8531   auprc: 0.4285   auroc: 0.7760   f1: 0.2958   loss: 0.4033   mcc: 0.2821   precision: 0.5958   recall: 0.1967   threshold: 0.5000   
+valid: accuracy: 0.7305   auprc: 0.3436   auroc: 0.7587   f1: 0.4146   loss: 0.4355   mcc: 0.2898   precision: 0.3117   recall: 0.6190   threshold: 0.2400   
+epoch: 47
+train: accuracy: 0.8547   auprc: 0.4453   auroc: 0.7860   f1: 0.3078   loss: 0.3948   mcc: 0.2942   precision: 0.6087   recall: 0.2060   threshold: 0.5000   
+valid: accuracy: 0.7318   auprc: 0.3367   auroc: 0.7588   f1: 0.4125   loss: 0.4376   mcc: 0.2866   precision: 0.3114   recall: 0.6107   threshold: 0.2600   
+epoch: 48
+train: accuracy: 0.8532   auprc: 0.4361   auroc: 0.7830   f1: 0.2964   loss: 0.4027   mcc: 0.2830   precision: 0.5975   recall: 0.1971   threshold: 0.5000   
+valid: accuracy: 0.7399   auprc: 0.3379   auroc: 0.7546   f1: 0.4103   loss: 0.4381   mcc: 0.2831   precision: 0.3154   recall: 0.5867   threshold: 0.2200   
+epoch: 49
+train: accuracy: 0.8532   auprc: 0.4388   auroc: 0.7827   f1: 0.2954   loss: 0.3999   mcc: 0.2825   precision: 0.5981   recall: 0.1961   threshold: 0.5000   
+valid: accuracy: 0.7504   auprc: 0.3414   auroc: 0.7604   f1: 0.4151   loss: 0.4427   mcc: 0.2895   precision: 0.3250   recall: 0.5744   threshold: 0.1800   
+epoch: 50
+train: accuracy: 0.8567   auprc: 0.4488   auroc: 0.7840   f1: 0.3155   loss: 0.3973   mcc: 0.3057   precision: 0.6294   recall: 0.2105   threshold: 0.5000   
+valid: accuracy: 0.7466   auprc: 0.3383   auroc: 0.7567   f1: 0.4104   loss: 0.4388   mcc: 0.2832   precision: 0.3200   recall: 0.5720   threshold: 0.2200   
+best epoch: 44
+best valid: accuracy: 0.7381   auprc: 0.3514   auroc: 0.7515   f1: 0.4053   loss: 0.4392   mcc: 0.2765   precision: 0.3119   recall: 0.5788   threshold: 0.2100   
+test_315: accuracy: 0.7813   auprc: 0.3941   auroc: 0.7871   f1: 0.4307   loss: 0.4059   mcc: 0.3220   precision: 0.3433   recall: 0.5778   threshold: 0.2400   
+test_60: accuracy: 0.7599   auprc: 0.3960   auroc: 0.7613   f1: 0.4366   loss: 0.4434   mcc: 0.3137   precision: 0.3468   recall: 0.5894   threshold: 0.2000   
+btest_31: accuracy: 0.7869   auprc: 0.3751   auroc: 0.7743   f1: 0.4186   loss: 0.3837   mcc: 0.3187   precision: 0.3275   recall: 0.5800   threshold: 0.2000   
+ubtest_31: accuracy: 0.7834   auprc: 0.2752   auroc: 0.7355   f1: 0.3649   loss: 0.3881   mcc: 0.2572   precision: 0.2899   recall: 0.4923   threshold: 0.2100   
