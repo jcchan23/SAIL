@@ -8,6 +8,8 @@ The IJCAI 2020 paper could be referred at [Communicative Representation Learning
 
 **Notes: Since the limitation of dgl, we could not implement the reverse edge in the model. The original calculation could be found in the paper Algorithm 1 line 8, so we delete the minus of reverse edge as the substitution and find it will not cause performance decrease a lot.**
 
+![CMPNN_framework](./framework.png)
+
 ## Dependencies
 + cuda == 10.2
 + cudnn == 7.6.5
