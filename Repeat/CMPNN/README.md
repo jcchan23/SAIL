@@ -83,10 +83,10 @@ To reproduce all the results, run firstly:
 
 it will generate a pickle file in the `data/preprocess` with the same dataset name, this pickle file contain 4 objects:
 
-+ `smile_list:` All SMILES strings in the dataset.
-+ `mol_dict:` Unique SMILES strings -> RDKit mol object.
-+ `graph_dict:` Unique SMILES strings -> dgl graph object.
-+ `label_dict:` Unique SMILES strings -> label list.
++ `smiles_list:` All SMILES strings in the dataset.
++ `mols_dict:` Unique SMILES strings -> RDKit mol object.
++ `graphs_dict:` Unique SMILES strings -> dgl graph object.
++ `labels_dict:` Unique SMILES strings -> label list.
 
 Then run:
 
