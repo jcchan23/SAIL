@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+@File    :   run.py
+@Time    :   2022/01/14 08:52:26
+@Author  :   Jianwen Chen
+@Version :   1.0
+@Contact :   chenjw48@mail2.sysu.edu.cn
+@License :   (C)Copyright 2021-2022, SAIL-Lab
+'''
 ######################################## import area ########################################
 
 # common library
