@@ -104,7 +104,7 @@ def test(dataset_name, args, device):
 
         # prediction
         for model_path in sorted(model_paths):
-            fold_num = model_path[-6]
+            fold_num = model_path[-6] if model_path[-6] != '0' else '10'
             
             # load weights
             model.eval()
