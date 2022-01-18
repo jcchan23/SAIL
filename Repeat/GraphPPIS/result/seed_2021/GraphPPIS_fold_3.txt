@@ -150,7 +150,3 @@ train: accuracy: 0.8517   auprc: 0.4157   auroc: 0.7707   f1: 0.2479   loss: 0.4
 valid: accuracy: 0.7874   auprc: 0.4072   auroc: 0.7882   f1: 0.4483   loss: 0.4141   mcc: 0.3312   precision: 0.3776   recall: 0.5516   threshold: 0.2800   
 best epoch: 47
 best valid: accuracy: 0.7947   auprc: 0.4209   auroc: 0.7855   f1: 0.4520   loss: 0.4116   mcc: 0.3367   precision: 0.3884   recall: 0.5406   threshold: 0.2800   
-test_315: accuracy: 0.7941   auprc: 0.4022   auroc: 0.7881   f1: 0.4299   loss: 0.4069   mcc: 0.3210   precision: 0.3561   recall: 0.5423   threshold: 0.2800   
-test_60: accuracy: 0.7766   auprc: 0.4068   auroc: 0.7756   f1: 0.4395   loss: 0.4285   mcc: 0.3181   precision: 0.3639   recall: 0.5547   threshold: 0.2400   
-btest_31: accuracy: 0.7841   auprc: 0.3738   auroc: 0.7906   f1: 0.4212   loss: 0.3702   mcc: 0.3225   precision: 0.3264   recall: 0.5938   threshold: 0.2200   
-ubtest_31: accuracy: 0.7977   auprc: 0.3017   auroc: 0.7507   f1: 0.3859   loss: 0.3843   mcc: 0.2836   precision: 0.3131   recall: 0.5030   threshold: 0.2400   

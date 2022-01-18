@@ -1,0 +1,7 @@
+Btest_31 size: 31
+fold 1: accuracy: 0.7809   auprc: 0.3772   auroc: 0.7984   f1: 0.4278   mcc: 0.3321   precision: 0.3269   recall: 0.6191   threshold: 0.1700   
+fold 2: accuracy: 0.7960   auprc: 0.3647   auroc: 0.7824   f1: 0.4076   mcc: 0.3042   precision: 0.3309   recall: 0.5305   threshold: 0.2200   
+fold 3: accuracy: 0.7841   auprc: 0.3738   auroc: 0.7906   f1: 0.4212   mcc: 0.3225   precision: 0.3264   recall: 0.5938   threshold: 0.2200   
+fold 4: accuracy: 0.7940   auprc: 0.3653   auroc: 0.7814   f1: 0.4079   mcc: 0.3045   precision: 0.3291   recall: 0.5362   threshold: 0.2400   
+fold 5: accuracy: 0.7869   auprc: 0.3751   auroc: 0.7743   f1: 0.4186   mcc: 0.3187   precision: 0.3275   recall: 0.5800   threshold: 0.2000   
+ensemble: accuracy: 0.8150   auprc: 0.3891   auroc: 0.7948   f1: 0.4250   mcc: 0.3262   precision: 0.3609   recall: 0.5167   threshold: 0.2300   

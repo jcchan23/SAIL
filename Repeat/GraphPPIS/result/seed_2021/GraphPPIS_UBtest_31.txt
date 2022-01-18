@@ -1,0 +1,7 @@
+UBtest_31 size: 31
+fold 1: accuracy: 0.7952   auprc: 0.3045   auroc: 0.7612   f1: 0.3918   mcc: 0.2908   precision: 0.3136   recall: 0.5220   threshold: 0.1900   
+fold 2: accuracy: 0.7564   auprc: 0.2808   auroc: 0.7446   f1: 0.3626   mcc: 0.2549   precision: 0.2709   recall: 0.5482   threshold: 0.2000   
+fold 3: accuracy: 0.7977   auprc: 0.3017   auroc: 0.7507   f1: 0.3859   mcc: 0.2836   precision: 0.3131   recall: 0.5030   threshold: 0.2400   
+fold 4: accuracy: 0.8114   auprc: 0.2950   auroc: 0.7532   f1: 0.3671   mcc: 0.2635   precision: 0.3187   recall: 0.4328   threshold: 0.2700   
+fold 5: accuracy: 0.7834   auprc: 0.2752   auroc: 0.7355   f1: 0.3649   mcc: 0.2572   precision: 0.2899   recall: 0.4923   threshold: 0.2100   
+ensemble: accuracy: 0.7920   auprc: 0.2999   auroc: 0.7572   f1: 0.3871   mcc: 0.2849   precision: 0.3084   recall: 0.5196   threshold: 0.2200   

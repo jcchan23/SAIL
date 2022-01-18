@@ -8,7 +8,7 @@ The web server is freely available at [https://biomed.nscc-gz.cn:9094/apps/Graph
 
 The Bioinformatics paper could be refered at [Structure-aware protein–protein interaction site prediction using deep graph convolutional network](https://doi.org/10.1093/bioinformatics/btab643).
 
-![GraphPPIS_framkwork](./framework.png)
+![GraphPPIS_framework](./framework.png)
 
 ## Dependencies
 + cuda == 10.2
@@ -74,18 +74,27 @@ it will generate a pickle file in the `data/preprocess` with the same dataset na
 
 Then run:
 
-`python run.py --gpu <gpu id> --run_fold <fold_num>`
+`python train.py --gpu <gpu id> --run_fold <fold_num>`
 
 + `<gpu id>` is the gpu id.
 + `<fold_num>` is the fold number, you must choose fold number from `[1, 2, 3, 4, 5]` since the 5-fold cv.
 
-Others parameters could be refered in the `run.py`.
+Others parameters could be refered in the `train.py`.
+
+Finally, run
+
+`python test.py --gpu <gpu id> --run_fold <fold_num>`
+
++ `<gpu id>` is the gpu id.
++ `<fold_num>` is the fold number, you can choose fold number from `[1, 2, 3, 4, 5]` since the 5-fold cv, also you can use default fold number `0`, and it will make an ensemble prediction for all 5 folds.
 
 After running the code, it will create a folder with the format `seed_<args.seed>` in the `./result/` folder, the folder will contain:
 
 ```
 result/
 └── seed_2021
+    ├── GraphPPIS_Btest_31.csv
+    ├── GraphPPIS_Btest_31.txt
     ├── GraphPPIS_fold_1.ckpt
     ├── GraphPPIS_fold_1.txt
     ├── GraphPPIS_fold_2.ckpt
@@ -96,6 +105,12 @@ result/
     ├── GraphPPIS_fold_4.txt
     ├── GraphPPIS_fold_5.ckpt
     ├── GraphPPIS_fold_5.txt
+    ├── GraphPPIS_Test_315.csv
+    ├── GraphPPIS_Test_315.txt
+    ├── GraphPPIS_Test_60.csv
+    ├── GraphPPIS_Test_60.txt
+    ├── GraphPPIS_UBtest_31.csv
+    ├── GraphPPIS_UBtest_31.txt
     ├── train_fold_1.txt
     ├── train_fold_2.txt
     ├── train_fold_3.txt
@@ -107,6 +122,11 @@ result/
     ├── valid_fold_4.txt
     └── valid_fold_5.txt
 ```
+
++ `train_fold_*.txt` is the name of train dataset.
++ `valid_fold_*.txt` is the name of validation dataset.
++ `GraphPPIS_fold_*.txt/ckpt` is the train log / model of each fold.
++ `GraphPPIS_<dataset_name>.txt/csv` is the test dataset performance and its corresponding predictions.
 
 ## Citation:
 

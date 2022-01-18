@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   utils.py
-@Time    :   2022/01/14 08:52:42
+@Time    :   2022/01/18 14:07:51
 @Author  :   Jianwen Chen
 @Version :   1.0
 @Contact :   chenjw48@mail2.sysu.edu.cn
@@ -75,6 +75,8 @@ def loop(data_loader, model, optimizer, scheduler, device):
     
     loss_sum, y_true, y_pred = 0.0, list(), list()
     
+    predictions = dict()
+    
     for batch in data_loader:
         
         names, sequences, graphs, labels, masks = batch
@@ -105,9 +107,10 @@ def loop(data_loader, model, optimizer, scheduler, device):
         scores = torch.softmax(outputs, dim=1)
         scores = scores.detach().cpu().numpy()
         scores = scores[:, 1]
-        for idx, length in masks:
+        for name, (idx, length) in zip(names, masks):
             y_true.append(labels[idx:idx+length].tolist())
             y_pred.append(scores[idx:idx+length].tolist())
+            predictions[name] = scores[idx:idx+length].tolist()
         
         # clear cuda cache
         torch.cuda.empty_cache()
@@ -115,10 +118,10 @@ def loop(data_loader, model, optimizer, scheduler, device):
     # train with threshold = 0.5, test without using threshold
     if optimizer is not None:
         results = cal_metric(y_true, y_pred, best_threshold=0.5)
+        results['loss'] = loss_sum / (len(data_loader) * batch_size)
     else:
         results = cal_metric(y_true, y_pred, best_threshold=None)
-    results['loss'] = loss_sum / (len(data_loader) * batch_size)
-    return results
+    return results, predictions
 
 
 def cal_loss(y_true, y_pred, y_mask):
