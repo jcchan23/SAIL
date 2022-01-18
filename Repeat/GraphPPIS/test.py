@@ -45,7 +45,7 @@ parser.add_argument('--batch_size', type=int, default=2,
                     help='The batch size')
 parser.add_argument('--result_path', type=str, default='./result',
                     help='The name of result path, for logs, predictions, best models, etc.')
-parser.add_argument('--run_fold', type=int, default=0, choices=[1, 2, 3, 4, 5],
+parser.add_argument('--run_fold', type=int, default=0, choices=[0, 1, 2, 3, 4, 5],
                     help='The parallel running fold')
 # dataset setting
 parser.add_argument('--data_path', type=str, default='./data/preprocess',
