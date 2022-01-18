@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File    :   run.py
+@File    :   train.py
 @Time    :   2022/01/18 14:07:31
 @Author  :   Jianwen Chen
 @Version :   1.0
