@@ -81,7 +81,7 @@ Then run:
 
 Others parameters could be refered in the `train.py`.
 
-Finally, run
+Finally run:
 
 `python test.py --gpu <gpu id> --run_fold <fold_num>`
 
