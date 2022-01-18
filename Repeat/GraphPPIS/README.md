@@ -39,19 +39,19 @@ The Bioinformatics paper could be refered at [Structure-aware protein–protein 
 |Method|5-fold CV|Test315|Test60|Btest31|UBTest31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.783±0.002|0.790|0.786|0.780|0.750|
-|GraphPPIS-dgl|0.771±0.012|0.792±0.004|0.773±0.006|0.785±0.008|0.749±0.009|
+|GraphPPIS-dgl|0.771±0.012|0.800|0.781|0.795|0.757|
 
 *3. Performance comparision on AUPRC*
 |Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.423±0.003|0.423|0.429|0.395|0.323|
-|GraphPPIS-dgl|0.410±0.024|0.406±0.008|0.405±0.005|0.371±0.005|0.291±0.011|
+|GraphPPIS-dgl|0.410±0.024|0.418|0.421|0.389|0.300|
 
 *4. Performance comparision on MCC*
 |Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.324±0.011|0.336|0.333|0.328|0.280|
-|GraphPPIS-dgl|0.310±0.020|0.326±0.006|0.315±0.007|0.316±0.011|0.270±0.014|
+|GraphPPIS-dgl|0.310±0.020|0.335|0.324|0.326|0.284|
 
 *Note*
 
