@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+@File    :   model.py
+@Time    :   2022/01/17 16:00:19
+@Author  :   Jianwen Chen
+@Version :   1.0
+@Contact :   chenjw48@mail2.sysu.edu.cn
+@License :   (C)Copyright 2021-2022, SAIL-Lab
+'''
 ######################################## import area ########################################
 
 # common library
@@ -8,7 +18,6 @@ import torch.nn.functional as F
 import dgl
 import dgl.function as fn
 from torch.nn.parameter import Parameter
-from dgl.nn.pytorch.glob import AvgPooling
 
 ######################################## function area ########################################
 
@@ -67,24 +76,27 @@ class GraphSol(nn.Module):
     def __init__(self, in_features, hidden_features, output_features, attention_features, attention_heads):
         super(GraphSol, self).__init__()
         
-        self.conv1 = GraphConvolution(in_features=in_features, out_features=hidden_features * 4)
-        self.fc1 = nn.LayerNorm(hidden_features * 4)
-        self.conv2 = GraphConvolution(in_features=hidden_features * 4, out_features=hidden_features)
-        self.fc2 = nn.LayerNorm(hidden_features)
-        self.relu = nn.LeakyReLU(0.2, inplace=True)
+        self.fc = nn.Linear(in_features, hidden_features)
+        self.conv1 = GraphConvolution(in_features=hidden_features, out_features=hidden_features)
+        self.ln1 = nn.LayerNorm(hidden_features)
+        self.conv2 = GraphConvolution(in_features=hidden_features, out_features=hidden_features)
+        self.ln2 = nn.LayerNorm(hidden_features)
+        self.relu = nn.LeakyReLU(0.1, inplace=True)
         
         self.pooling = AttnPooling(hidden_features, dense_features=attention_features, n_heads=attention_heads)
         self.fc_final = nn.Linear(hidden_features, output_features)
         
     def forward(self, graphs, device):
         
-        graphs.ndata['h'] = graphs.ndata['x'].clone()
-        graphs.ndata['h'] = self.conv1(graphs)
-        graphs.ndata['h'] = self.relu(self.fc1(graphs.ndata['h']))
-        graphs.ndata['h'] = self.conv2(graphs)
-        graphs.ndata['h'] = self.relu(self.fc2(graphs.ndata['h']))
+        graphs.ndata['h'] = self.fc(graphs.ndata['x'])
+        h0 = graphs.ndata['h'].clone()
         
-        output = self.pooling(graphs) 
+        graphs.ndata['h'] = h0 + self.ln1(self.relu(self.conv1(graphs)))
+        h1 = graphs.ndata['h'].clone()
+        
+        graphs.ndata['h'] = h0 + h1 + self.ln2(self.relu(self.conv2(graphs)))
+        
+        output = self.pooling(graphs)
         output = F.sigmoid(self.fc_final(output))
         graphs.ndata.pop('h')
         

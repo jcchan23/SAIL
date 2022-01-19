@@ -1,0 +1,92 @@
+epoch: 1
+train: accuracy: 0.6415   auroc: 0.7004   f1: 0.5901   loss: 0.0860   pearson: 0.4136   precision: 0.6055   r2: 0.1710   recall: 0.5755   rmse: 0.2933   
+valid: accuracy: 0.7019   auroc: 0.7547   f1: 0.6682   pearson: 0.4794   precision: 0.6730   r2: 0.2286   recall: 0.6636   rmse: 0.2759   
+epoch: 2
+train: accuracy: 0.7181   auroc: 0.7872   f1: 0.6844   loss: 0.0695   pearson: 0.5760   precision: 0.6873   r2: 0.3297   recall: 0.6816   rmse: 0.2637   
+valid: accuracy: 0.7230   auroc: 0.7885   f1: 0.6650   pearson: 0.5395   precision: 0.7345   r2: 0.2834   recall: 0.6075   rmse: 0.2659   
+epoch: 3
+train: accuracy: 0.7462   auroc: 0.8098   f1: 0.7156   loss: 0.0647   pearson: 0.6132   precision: 0.7190   r2: 0.3756   recall: 0.7123   rmse: 0.2545   
+valid: accuracy: 0.7336   auroc: 0.8030   f1: 0.7162   pearson: 0.5602   precision: 0.6913   r2: 0.3049   recall: 0.7430   rmse: 0.2619   
+epoch: 4
+train: accuracy: 0.7562   auroc: 0.8228   f1: 0.7254   loss: 0.0616   pearson: 0.6376   precision: 0.7329   r2: 0.4063   recall: 0.7182   rmse: 0.2482   
+valid: accuracy: 0.7252   auroc: 0.8161   f1: 0.7314   pearson: 0.5720   precision: 0.6556   r2: 0.2911   recall: 0.8271   rmse: 0.2645   
+epoch: 5
+train: accuracy: 0.7620   auroc: 0.8312   f1: 0.7321   loss: 0.0595   pearson: 0.6534   precision: 0.7392   r2: 0.4264   recall: 0.7252   rmse: 0.2439   
+valid: accuracy: 0.7252   auroc: 0.7933   f1: 0.6905   pearson: 0.5695   precision: 0.7039   r2: 0.3092   recall: 0.6776   rmse: 0.2611   
+epoch: 6
+train: accuracy: 0.7689   auroc: 0.8392   f1: 0.7407   loss: 0.0576   pearson: 0.6666   precision: 0.7455   r2: 0.4442   recall: 0.7358   rmse: 0.2401   
+valid: accuracy: 0.7336   auroc: 0.8068   f1: 0.6866   pearson: 0.5867   precision: 0.7340   r2: 0.3378   recall: 0.6449   rmse: 0.2557   
+epoch: 7
+train: accuracy: 0.7721   auroc: 0.8456   f1: 0.7411   loss: 0.0559   pearson: 0.6794   precision: 0.7552   r2: 0.4613   recall: 0.7276   rmse: 0.2364   
+valid: accuracy: 0.7526   auroc: 0.8176   f1: 0.7359   pearson: 0.5884   precision: 0.7118   r2: 0.3379   recall: 0.7617   rmse: 0.2556   
+epoch: 8
+train: accuracy: 0.7715   auroc: 0.8476   f1: 0.7416   loss: 0.0554   pearson: 0.6821   precision: 0.7524   r2: 0.4652   recall: 0.7311   rmse: 0.2355   
+valid: accuracy: 0.7421   auroc: 0.8045   f1: 0.7150   pearson: 0.5931   precision: 0.7150   r2: 0.3384   recall: 0.7150   rmse: 0.2555   
+epoch: 9
+train: accuracy: 0.7779   auroc: 0.8526   f1: 0.7506   loss: 0.0542   pearson: 0.6906   precision: 0.7560   r2: 0.4768   recall: 0.7453   rmse: 0.2330   
+valid: accuracy: 0.7484   auroc: 0.8079   f1: 0.7187   pearson: 0.5969   precision: 0.7273   r2: 0.3440   recall: 0.7103   rmse: 0.2545   
+epoch: 10
+train: accuracy: 0.7879   auroc: 0.8567   f1: 0.7609   loss: 0.0527   pearson: 0.7017   precision: 0.7696   r2: 0.4921   recall: 0.7524   rmse: 0.2295   
+valid: accuracy: 0.7611   auroc: 0.8142   f1: 0.7316   pearson: 0.5996   precision: 0.7440   r2: 0.3508   recall: 0.7196   rmse: 0.2531   
+epoch: 11
+train: accuracy: 0.7906   auroc: 0.8647   f1: 0.7629   loss: 0.0519   pearson: 0.7071   precision: 0.7749   r2: 0.4998   recall: 0.7512   rmse: 0.2278   
+valid: accuracy: 0.7696   auroc: 0.8106   f1: 0.7361   pearson: 0.5999   precision: 0.7638   r2: 0.3467   recall: 0.7103   rmse: 0.2539   
+epoch: 12
+train: accuracy: 0.7959   auroc: 0.8666   f1: 0.7713   loss: 0.0500   pearson: 0.7196   precision: 0.7750   r2: 0.5176   recall: 0.7677   rmse: 0.2237   
+valid: accuracy: 0.7569   auroc: 0.8137   f1: 0.7380   pearson: 0.6014   precision: 0.7200   r2: 0.3451   recall: 0.7570   rmse: 0.2543   
+epoch: 13
+train: accuracy: 0.7927   auroc: 0.8654   f1: 0.7667   loss: 0.0504   pearson: 0.7172   precision: 0.7740   r2: 0.5142   recall: 0.7594   rmse: 0.2245   
+valid: accuracy: 0.7357   auroc: 0.8171   f1: 0.7312   pearson: 0.6104   precision: 0.6773   r2: 0.3408   recall: 0.7944   rmse: 0.2551   
+epoch: 14
+train: accuracy: 0.7990   auroc: 0.8742   f1: 0.7749   loss: 0.0491   pearson: 0.7259   precision: 0.7786   r2: 0.5266   recall: 0.7712   rmse: 0.2216   
+valid: accuracy: 0.7696   auroc: 0.8176   f1: 0.7517   pearson: 0.6113   precision: 0.7333   r2: 0.3579   recall: 0.7710   rmse: 0.2517   
+epoch: 15
+train: accuracy: 0.7932   auroc: 0.8696   f1: 0.7663   loss: 0.0491   pearson: 0.7257   precision: 0.7770   r2: 0.5264   recall: 0.7559   rmse: 0.2216   
+valid: accuracy: 0.7590   auroc: 0.8247   f1: 0.7107   pearson: 0.6166   precision: 0.7778   r2: 0.3638   recall: 0.6542   rmse: 0.2506   
+epoch: 16
+train: accuracy: 0.8001   auroc: 0.8798   f1: 0.7739   loss: 0.0472   pearson: 0.7382   precision: 0.7852   r2: 0.5447   recall: 0.7630   rmse: 0.2173   
+valid: accuracy: 0.7484   auroc: 0.8263   f1: 0.6877   pearson: 0.6165   precision: 0.7844   r2: 0.3493   recall: 0.6121   rmse: 0.2534   
+epoch: 17
+train: accuracy: 0.8001   auroc: 0.8756   f1: 0.7731   loss: 0.0474   pearson: 0.7367   precision: 0.7873   r2: 0.5426   recall: 0.7594   rmse: 0.2178   
+valid: accuracy: 0.7548   auroc: 0.8248   f1: 0.7129   pearson: 0.6264   precision: 0.7579   r2: 0.3802   recall: 0.6729   rmse: 0.2473   
+epoch: 18
+train: accuracy: 0.8102   auroc: 0.8812   f1: 0.7854   loss: 0.0467   pearson: 0.7417   precision: 0.7964   r2: 0.5498   recall: 0.7748   rmse: 0.2161   
+valid: accuracy: 0.7590   auroc: 0.8293   f1: 0.7478   pearson: 0.6185   precision: 0.7101   r2: 0.3641   recall: 0.7897   rmse: 0.2505   
+epoch: 19
+train: accuracy: 0.8112   auroc: 0.8820   f1: 0.7886   loss: 0.0460   pearson: 0.7461   precision: 0.7919   r2: 0.5566   recall: 0.7854   rmse: 0.2145   
+valid: accuracy: 0.7674   auroc: 0.8257   f1: 0.7304   pearson: 0.6277   precision: 0.7680   r2: 0.3824   recall: 0.6963   rmse: 0.2469   
+epoch: 20
+train: accuracy: 0.8133   auroc: 0.8869   f1: 0.7910   loss: 0.0450   pearson: 0.7524   precision: 0.7943   r2: 0.5659   recall: 0.7877   rmse: 0.2122   
+valid: accuracy: 0.7590   auroc: 0.8277   f1: 0.7311   pearson: 0.6214   precision: 0.7381   r2: 0.3769   recall: 0.7243   rmse: 0.2480   
+epoch: 21
+train: accuracy: 0.8096   auroc: 0.8851   f1: 0.7855   loss: 0.0447   pearson: 0.7542   precision: 0.7940   r2: 0.5687   recall: 0.7771   rmse: 0.2115   
+valid: accuracy: 0.7526   auroc: 0.8314   f1: 0.7473   pearson: 0.6200   precision: 0.6948   r2: 0.3463   recall: 0.8084   rmse: 0.2540   
+epoch: 22
+train: accuracy: 0.8123   auroc: 0.8905   f1: 0.7888   loss: 0.0440   pearson: 0.7593   precision: 0.7959   r2: 0.5756   recall: 0.7818   rmse: 0.2098   
+valid: accuracy: 0.7611   auroc: 0.8174   f1: 0.7251   pearson: 0.6172   precision: 0.7563   r2: 0.3647   recall: 0.6963   rmse: 0.2504   
+epoch: 23
+train: accuracy: 0.8086   auroc: 0.8912   f1: 0.7855   loss: 0.0437   pearson: 0.7608   precision: 0.7893   r2: 0.5787   recall: 0.7818   rmse: 0.2090   
+valid: accuracy: 0.7484   auroc: 0.8221   f1: 0.6844   pearson: 0.6214   precision: 0.7914   r2: 0.3413   recall: 0.6028   rmse: 0.2550   
+epoch: 24
+train: accuracy: 0.8154   auroc: 0.8898   f1: 0.7899   loss: 0.0425   pearson: 0.7681   precision: 0.8069   r2: 0.5896   recall: 0.7736   rmse: 0.2063   
+valid: accuracy: 0.7590   auroc: 0.8296   f1: 0.7511   pearson: 0.6167   precision: 0.7049   r2: 0.3480   recall: 0.8037   rmse: 0.2537   
+epoch: 25
+train: accuracy: 0.8207   auroc: 0.8985   f1: 0.7988   loss: 0.0415   pearson: 0.7748   precision: 0.8041   r2: 0.6001   recall: 0.7936   rmse: 0.2037   
+valid: accuracy: 0.7780   auroc: 0.8309   f1: 0.7355   pearson: 0.6311   precision: 0.7978   r2: 0.3776   recall: 0.6822   rmse: 0.2479   
+epoch: 26
+train: accuracy: 0.8202   auroc: 0.8965   f1: 0.7979   loss: 0.0415   pearson: 0.7748   precision: 0.8046   r2: 0.5998   recall: 0.7913   rmse: 0.2037   
+valid: accuracy: 0.7632   auroc: 0.8278   f1: 0.7200   pearson: 0.6254   precision: 0.7742   r2: 0.3704   recall: 0.6729   rmse: 0.2493   
+epoch: 27
+train: accuracy: 0.8234   auroc: 0.8971   f1: 0.7990   loss: 0.0408   pearson: 0.7790   precision: 0.8157   r2: 0.6063   recall: 0.7830   rmse: 0.2021   
+valid: accuracy: 0.7696   auroc: 0.8294   f1: 0.7583   pearson: 0.6175   precision: 0.7215   r2: 0.3606   recall: 0.7991   rmse: 0.2512   
+epoch: 28
+train: accuracy: 0.8250   auroc: 0.9027   f1: 0.8031   loss: 0.0401   pearson: 0.7835   precision: 0.8103   r2: 0.6137   recall: 0.7960   rmse: 0.2002   
+valid: accuracy: 0.7442   auroc: 0.8126   f1: 0.6824   pearson: 0.6102   precision: 0.7784   r2: 0.3334   recall: 0.6075   rmse: 0.2565   
+epoch: 29
+train: accuracy: 0.8302   auroc: 0.9088   f1: 0.8072   loss: 0.0387   pearson: 0.7916   precision: 0.8225   r2: 0.6263   recall: 0.7925   rmse: 0.1969   
+valid: accuracy: 0.7505   auroc: 0.8211   f1: 0.7122   pearson: 0.6194   precision: 0.7449   r2: 0.3712   recall: 0.6822   rmse: 0.2491   
+epoch: 30
+train: accuracy: 0.8355   auroc: 0.9068   f1: 0.8148   loss: 0.0383   pearson: 0.7947   precision: 0.8231   r2: 0.6306   recall: 0.8066   rmse: 0.1957   
+valid: accuracy: 0.7421   auroc: 0.8204   f1: 0.7081   pearson: 0.6209   precision: 0.7255   r2: 0.3735   recall: 0.6916   rmse: 0.2487   
+best epoch: 19
+best valid: accuracy: 0.7674   auroc: 0.8257   f1: 0.7304   pearson: 0.6277   precision: 0.7680   r2: 0.3824   recall: 0.6963   rmse: 0.2469   

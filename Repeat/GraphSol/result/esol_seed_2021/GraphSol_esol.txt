@@ -1,0 +1,7 @@
+esol_test size: 783
+fold 1: accuracy: 0.7829   auroc: 0.8645   f1: 0.7557   pearson: 0.6962   precision: 0.7645   r2: 0.4839   recall: 0.7472   rmse: 0.2302   
+fold 2: accuracy: 0.7893   auroc: 0.8692   f1: 0.7541   pearson: 0.7008   precision: 0.7931   r2: 0.4871   recall: 0.7188   rmse: 0.2295   
+fold 3: accuracy: 0.7816   auroc: 0.8701   f1: 0.7467   pearson: 0.7073   precision: 0.7802   r2: 0.4967   recall: 0.7159   rmse: 0.2273   
+fold 4: accuracy: 0.7829   auroc: 0.8654   f1: 0.7529   pearson: 0.6974   precision: 0.7708   r2: 0.4858   recall: 0.7358   rmse: 0.2298   
+fold 5: accuracy: 0.7867   auroc: 0.8649   f1: 0.7618   pearson: 0.6985   precision: 0.7650   r2: 0.4874   recall: 0.7585   rmse: 0.2294   
+ensemble: accuracy: 0.7905   auroc: 0.8719   f1: 0.7602   pearson: 0.7092   precision: 0.7831   r2: 0.5024   recall: 0.7386   rmse: 0.2261   

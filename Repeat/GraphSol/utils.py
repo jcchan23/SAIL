@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+@File    :   utils.py
+@Time    :   2022/01/17 16:00:31
+@Author  :   Jianwen Chen
+@Version :   1.0
+@Contact :   chenjw48@mail2.sysu.edu.cn
+@License :   (C)Copyright 2021-2022, SAIL-Lab
+'''
 ######################################## import area ########################################
 
 # common library
@@ -42,6 +52,8 @@ def loop(data_loader, model, optimizer, scheduler, device):
     
     loss_sum, y_true, y_pred = 0.0, list(), list()
     
+    predictions = dict()
+    
     for batch in data_loader:
         
         # names, sequences, graphs, labels, masks
@@ -74,14 +86,17 @@ def loop(data_loader, model, optimizer, scheduler, device):
         outputs = outputs.detach().cpu().numpy().tolist()
         y_true.extend(labels)
         y_pred.extend(outputs)
+        for name, output in zip(names, outputs):
+            predictions[name] = output
         
         # clear cuda cache
         torch.cuda.empty_cache()
 
     # metric with threshold 0.5
     results = cal_metric(y_true, y_pred, threshold=0.5)
-    results['loss'] = loss_sum / (len(data_loader) * batch_size)
-    return results
+    if optimizer is not None:
+        results['loss'] = loss_sum / (len(data_loader) * batch_size)
+    return results, predictions
 
 
 def cal_loss(y_true, y_pred, task_type='regression'):

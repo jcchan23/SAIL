@@ -1,0 +1,7 @@
+scerevisiae_test size: 108
+fold 1: accuracy: 0.6667   auroc: 0.7989   f1: 0.7273   pearson: 0.6227   precision: 0.8276   r2: 0.3285   recall: 0.6486   rmse: 0.2463   
+fold 2: accuracy: 0.6389   auroc: 0.7699   f1: 0.7023   pearson: 0.5992   precision: 0.8070   r2: 0.2552   recall: 0.6216   rmse: 0.2594   
+fold 3: accuracy: 0.6296   auroc: 0.7746   f1: 0.6825   pearson: 0.6082   precision: 0.8269   r2: 0.2682   recall: 0.5811   rmse: 0.2571   
+fold 4: accuracy: 0.7315   auroc: 0.7866   f1: 0.7943   pearson: 0.5934   precision: 0.8358   r2: 0.3221   recall: 0.7568   rmse: 0.2475   
+fold 5: accuracy: 0.6759   auroc: 0.7953   f1: 0.7445   pearson: 0.6268   precision: 0.8095   r2: 0.3376   recall: 0.6892   rmse: 0.2446   
+ensemble: accuracy: 0.6481   auroc: 0.7878   f1: 0.7164   pearson: 0.6191   precision: 0.8000   r2: 0.3179   recall: 0.6486   rmse: 0.2483   
