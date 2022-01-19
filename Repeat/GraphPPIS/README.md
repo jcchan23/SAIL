@@ -63,7 +63,7 @@ The Bioinformatics paper could be refered at [Structure-aware protein–protein 
 
 To reproduce all the results, please follow these steps:
 
-(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphPPIS` folder and download all zip files(about 1GB), put them into the `./data/preprocess` and finally unpack all the zip files.
+(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphPPIS` folder and download all zip files(about 100MB), put them into the `./data/preprocess` and finally unpack all the zip files.
 
 (2) Run:
 
