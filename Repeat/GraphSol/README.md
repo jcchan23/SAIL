@@ -77,7 +77,11 @@ The Journal of Cheminfomatics paper could be refered at [Structure-aware protein
 
 ## Running
 
-To reproduce all the results, run firstly:
+To reproduce all the results, please follow these steps:
+
+(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphSol` folder and download all zip files(about 1GB), put them into the `./data/preprocess` and finally unpack all the zip files.
+
+(2) Run:
 
 `python dataset_esol.py`
 
@@ -88,7 +92,7 @@ it will generate a pickle file in the `data/preprocess` with the same dataset na
 + `graphs_dict:` Unique protein names -> dgl graph object.
 + `labels_dict:` Unique protein names -> label list.
 
-Then run:
+(3) Run:
 
 `python train_esol.py --gpu <gpu id> --run_fold <fold_num>`
 
@@ -97,7 +101,7 @@ Then run:
 
 Others parameters could be refered in the `train_esol.py`.
 
-Finally run:
+(4) Run:
 
 `python test_esol.py --gpu <gpu id> --run_fold <fold_num>`
 

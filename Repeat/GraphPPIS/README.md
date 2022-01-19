@@ -61,7 +61,11 @@ The Bioinformatics paper could be refered at [Structure-aware protein–protein 
 
 ## Running
 
-To reproduce all the results, run firstly:
+To reproduce all the results, please follow these steps:
+
+(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphPPIS` folder and download all zip files(about 1GB), put them into the `./data/preprocess` and finally unpack all the zip files.
+
+(2) Run:
 
 `python dataset.py`
 
@@ -72,7 +76,7 @@ it will generate a pickle file in the `data/preprocess` with the same dataset na
 + `graphs_dict:` Unique protein names -> dgl graph object.
 + `labels_dict:` Unique protein names -> label list.
 
-Then run:
+(3) Run:
 
 `python train.py --gpu <gpu id> --run_fold <fold_num>`
 
@@ -81,7 +85,7 @@ Then run:
 
 Others parameters could be refered in the `train.py`.
 
-Finally run:
+(4) Run:
 
 `python test.py --gpu <gpu id> --run_fold <fold_num>`
 
