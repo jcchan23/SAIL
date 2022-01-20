@@ -27,7 +27,7 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 
 |Dataset|Binding residues|Non-binding residues|% of binding residues|
 |:---:  |:---:               |:---:                   |:---:        |
-|Train_573|14479|145404|9,06|
+|Train_573|14479|145404|9.06|
 |Test_129 |2240|35275|5.97|
 |Test_181|3208|72050|4.26|
 
