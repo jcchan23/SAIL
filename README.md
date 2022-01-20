@@ -24,7 +24,8 @@ SAIL-Lab统一代码库
 - [ ] 根据[OGB](https://ogb.stanford.edu/)中收集的数据集，增加结果。
 
 ### CoMPT
-- [ ] 代码进度0%
+- [x] 代码进度0%
+- [ ] 代码进度30%
 
 ### CrystalNet
 - [ ] 检查重现代码的性能与原始实现性能相差较大的问题。
@@ -35,13 +36,13 @@ SAIL-Lab统一代码库
 
 ### GraphPPIS
 - [x] 增加性能结果日志。
-- [ ] 调参研究性能差距。
+- [x] 调参研究性能差距。
 
 ### GraphSite
-- [ ] 代码进度60%
+- [x] 代码进度60%
 
 ### GraphSol
-- [ ] 增加S.cerevisiae数据集的结果。
+- [x] 增加S.cerevisiae数据集的结果。
 - [ ] 增加DeepSol数据集的结果。
 
 ### SPROF
