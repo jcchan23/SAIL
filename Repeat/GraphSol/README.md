@@ -79,13 +79,17 @@ The Journal of Cheminfomatics paper could be refered at [Structure-aware protein
 
 To reproduce all the results, please follow these steps:
 
-(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphSol` folder and download all zip files(about 1GB), put them into the `./data/preprocess` and finally unpack all the zip files.
+(1) Open the share link below, go to the `./GraphSol` folder and download all zip files(about 1GB), put them into the `./data/preprocess` and finally unpack all the zip files.
+
+Baidu drive: 链接：https://pan.baidu.com/s/1Q5SzrLhOCtUaNHzSDhUGFA 提取码：1l4e 
+
+Google drive: [Link](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing)
 
 (2) Run:
 
 `python dataset_esol.py`
 
-it will generate a pickle file in the `data/preprocess` with the same dataset name, this pickle file contain 4 objects:
+it will generate a pickle file in the `./data/preprocess` with the same dataset name, this pickle file contain 4 objects:
 
 + `names_list:` All protein names in the dataset.
 + `sequences_dict:` Unique protein names -> protein sequence.

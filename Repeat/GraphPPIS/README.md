@@ -36,19 +36,19 @@ The Bioinformatics paper could be refered at [Structure-aware protein–protein 
 |UBtest_31|841|5813 |12.64|
 
 *2. Performance comparision on AUROC*
-|Method|5-fold CV|Test315|Test60|Btest31|UBTest31|
+|Method|5-fold CV|Test_315|Test_60|Btest_31|UBTest_31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.783±0.002|0.790|0.786|0.780|0.750|
 |GraphPPIS-dgl|0.771±0.012|0.800|0.781|0.795|0.757|
 
 *3. Performance comparision on AUPRC*
-|Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
+|Method|5-fold CV|Test_315|Test_60|Btest_31|UBTest_31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.423±0.003|0.423|0.429|0.395|0.323|
 |GraphPPIS-dgl|0.410±0.024|0.418|0.421|0.389|0.300|
 
 *4. Performance comparision on MCC*
-|Method|5-fold CV|Test315|Test60|BTest31|UBTest31|
+|Method|5-fold CV|Test_315|Test_60|Btest_31|UBTest_31|
 |:---: |:---:| :---:| :---:| :---:| :---: |
 |GraphPPIS    |0.324±0.011|0.336|0.333|0.328|0.280|
 |GraphPPIS-dgl|0.310±0.020|0.335|0.324|0.326|0.284|
@@ -63,13 +63,17 @@ The Bioinformatics paper could be refered at [Structure-aware protein–protein 
 
 To reproduce all the results, please follow these steps:
 
-(1) Open the share google drive link [SAIL](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing), come to the `./GraphPPIS` folder and download all zip files(about 100MB), put them into the `./data/preprocess` and finally unpack all the zip files.
+(1) Open the share link below, go to the `./GraphPPIS` folder and download all zip files(about 100MB), put them into the `./data/preprocess` and finally unpack all the zip files.
+
+Baidu drive: 链接：https://pan.baidu.com/s/1Q5SzrLhOCtUaNHzSDhUGFA 提取码：1l4e 
+
+Google drive: [Link](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing)
 
 (2) Run:
 
 `python dataset.py`
 
-it will generate a pickle file in the `data/preprocess` with the same dataset name, this pickle file contain 4 objects:
+it will generate a pickle file in the `./data/preprocess` with the same dataset name, this pickle file contain 4 objects:
 
 + `names_list:` All protein names in the dataset.
 + `sequences_dict:` Unique protein names -> protein sequence.

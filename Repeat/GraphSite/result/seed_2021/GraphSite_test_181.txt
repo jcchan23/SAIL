@@ -1,0 +1,7 @@
+test_181 size: 181
+fold 1: accuracy: 0.9309   auprc: 0.3357   auroc: 0.8956   f1: 0.3889   mcc: 0.3673   precision: 0.3121   recall: 0.5159   threshold: 0.3000   
+fold 2: accuracy: 0.9375   auprc: 0.3368   auroc: 0.8951   f1: 0.3870   mcc: 0.3605   precision: 0.3324   recall: 0.4632   threshold: 0.2600   
+fold 3: accuracy: 0.9376   auprc: 0.3316   auroc: 0.8930   f1: 0.3865   mcc: 0.3598   precision: 0.3325   recall: 0.4613   threshold: 0.2000   
+fold 4: accuracy: 0.9304   auprc: 0.3389   auroc: 0.8945   f1: 0.3901   mcc: 0.3691   precision: 0.3112   recall: 0.5224   threshold: 0.2600   
+fold 5: accuracy: 0.9350   auprc: 0.3369   auroc: 0.8895   f1: 0.3897   mcc: 0.3650   precision: 0.3248   recall: 0.4869   threshold: 0.2800   
+ensemble: accuracy: 0.9329   auprc: 0.3502   auroc: 0.9016   f1: 0.4008   mcc: 0.3796   precision: 0.3237   recall: 0.5262   threshold: 0.2400   
