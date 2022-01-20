@@ -4,7 +4,7 @@ Reimplementation of the GraphPPIS model by using dgl.
 
 The original implementation could be referred at [GraphPPIS](https://github.com/yuanqm55/GraphPPIS) and [GraphPPIS-web](https://github.com/biomed-AI/GraphPPIS).
 
-The web server is freely available at [https://biomed.nscc-gz.cn:9094/apps/GraphPPIS](https://biomed.nscc-gz.cn:9094/apps/GraphPPIS).
+The web server is freely available at [https://biomed.nscc-gz.cn/apps/GraphPPIS](https://biomed.nscc-gz.cn/apps/GraphPPIS).
 
 The Bioinformatics paper could be refered at [Structure-aware protein–protein interaction site prediction using deep graph convolutional network](https://doi.org/10.1093/bioinformatics/btab643).
 
