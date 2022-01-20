@@ -34,6 +34,9 @@ SAIL-Lab统一代码库
 ### DeepANIS
 - [ ] 代码进度0%
 
+### Disorder
+- [ ] 交由师弟完成。
+
 ### GraphPPIS
 - [x] 增加性能结果日志。
 - [x] 调参研究性能差距。
