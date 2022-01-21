@@ -121,8 +121,8 @@ result/
 
 + `train_fold_*.txt` is the name of train dataset.
 + `valid_fold_*.txt` is the name of validation dataset.
-+ `GraphPPIS_fold_*.txt/ckpt` is the train log / model of each fold.
-+ `GraphPPIS_<dataset_name>.txt/csv` is the test dataset performance and its corresponding predictions.
++ `GraphSite_fold_*.txt/ckpt` is the train log / model of each fold.
++ `GraphSite_<dataset_name>.txt/csv` is the test dataset performance and its corresponding predictions.
 
 ## Citation:
 
