@@ -1,0 +1,302 @@
+epoch: 1
+train: accuracy: 0.2395   loss: 2.5997   
+valid: accuracy: 0.3308   
+epoch: 2
+train: accuracy: 0.3534   loss: 2.2737   
+valid: accuracy: 0.3625   
+epoch: 3
+train: accuracy: 0.3711   loss: 2.2196   
+valid: accuracy: 0.3752   
+epoch: 4
+train: accuracy: 0.3823   loss: 2.1873   
+valid: accuracy: 0.3904   
+epoch: 5
+train: accuracy: 0.3888   loss: 2.1682   
+valid: accuracy: 0.3899   
+epoch: 6
+train: accuracy: 0.3955   loss: 2.1480   
+valid: accuracy: 0.3987   
+epoch: 7
+train: accuracy: 0.4016   loss: 2.1312   
+valid: accuracy: 0.4009   
+epoch: 8
+train: accuracy: 0.4061   loss: 2.1186   
+valid: accuracy: 0.4059   
+epoch: 9
+train: accuracy: 0.4095   loss: 2.1095   
+valid: accuracy: 0.4084   
+epoch: 10
+train: accuracy: 0.4125   loss: 2.0994   
+valid: accuracy: 0.4125   
+epoch: 11
+train: accuracy: 0.4158   loss: 2.0914   
+valid: accuracy: 0.4155   
+epoch: 12
+train: accuracy: 0.4183   loss: 2.0837   
+valid: accuracy: 0.4166   
+epoch: 13
+train: accuracy: 0.4201   loss: 2.0781   
+valid: accuracy: 0.4148   
+epoch: 14
+train: accuracy: 0.4230   loss: 2.0713   
+valid: accuracy: 0.4182   
+epoch: 15
+train: accuracy: 0.4243   loss: 2.0667   
+valid: accuracy: 0.4169   
+epoch: 16
+train: accuracy: 0.4264   loss: 2.0612   
+valid: accuracy: 0.4242   
+epoch: 17
+train: accuracy: 0.4284   loss: 2.0565   
+valid: accuracy: 0.4245   
+epoch: 18
+train: accuracy: 0.4296   loss: 2.0508   
+valid: accuracy: 0.4247   
+epoch: 19
+train: accuracy: 0.4321   loss: 2.0461   
+valid: accuracy: 0.4268   
+epoch: 20
+train: accuracy: 0.4333   loss: 2.0419   
+valid: accuracy: 0.4250   
+epoch: 21
+train: accuracy: 0.4342   loss: 2.0391   
+valid: accuracy: 0.4268   
+epoch: 22
+train: accuracy: 0.4360   loss: 2.0348   
+valid: accuracy: 0.4297   
+epoch: 23
+train: accuracy: 0.4377   loss: 2.0314   
+valid: accuracy: 0.4286   
+epoch: 24
+train: accuracy: 0.4389   loss: 2.0279   
+valid: accuracy: 0.4311   
+epoch: 25
+train: accuracy: 0.4400   loss: 2.0244   
+valid: accuracy: 0.4316   
+epoch: 26
+train: accuracy: 0.4410   loss: 2.0218   
+valid: accuracy: 0.4315   
+epoch: 27
+train: accuracy: 0.4421   loss: 2.0187   
+valid: accuracy: 0.4328   
+epoch: 28
+train: accuracy: 0.4436   loss: 2.0158   
+valid: accuracy: 0.4325   
+epoch: 29
+train: accuracy: 0.4447   loss: 2.0122   
+valid: accuracy: 0.4321   
+epoch: 30
+train: accuracy: 0.4452   loss: 2.0105   
+valid: accuracy: 0.4328   
+epoch: 31
+train: accuracy: 0.4464   loss: 2.0080   
+valid: accuracy: 0.4343   
+epoch: 32
+train: accuracy: 0.4474   loss: 2.0049   
+valid: accuracy: 0.4333   
+epoch: 33
+train: accuracy: 0.4480   loss: 2.0036   
+valid: accuracy: 0.4348   
+epoch: 34
+train: accuracy: 0.4492   loss: 2.0007   
+valid: accuracy: 0.4364   
+epoch: 35
+train: accuracy: 0.4498   loss: 1.9986   
+valid: accuracy: 0.4351   
+epoch: 36
+train: accuracy: 0.4507   loss: 1.9962   
+valid: accuracy: 0.4365   
+epoch: 37
+train: accuracy: 0.4518   loss: 1.9940   
+valid: accuracy: 0.4367   
+epoch: 38
+train: accuracy: 0.4528   loss: 1.9920   
+valid: accuracy: 0.4362   
+epoch: 39
+train: accuracy: 0.4530   loss: 1.9906   
+valid: accuracy: 0.4352   
+epoch: 40
+train: accuracy: 0.4542   loss: 1.9883   
+valid: accuracy: 0.4368   
+epoch: 41
+train: accuracy: 0.4547   loss: 1.9865   
+valid: accuracy: 0.4380   
+epoch: 42
+train: accuracy: 0.4552   loss: 1.9847   
+valid: accuracy: 0.4379   
+epoch: 43
+train: accuracy: 0.4563   loss: 1.9830   
+valid: accuracy: 0.4363   
+epoch: 44
+train: accuracy: 0.4570   loss: 1.9810   
+valid: accuracy: 0.4379   
+epoch: 45
+train: accuracy: 0.4574   loss: 1.9797   
+valid: accuracy: 0.4385   
+epoch: 46
+train: accuracy: 0.4583   loss: 1.9778   
+valid: accuracy: 0.4380   
+epoch: 47
+train: accuracy: 0.4587   loss: 1.9762   
+valid: accuracy: 0.4387   
+epoch: 48
+train: accuracy: 0.4596   loss: 1.9744   
+valid: accuracy: 0.4370   
+epoch: 49
+train: accuracy: 0.4597   loss: 1.9734   
+valid: accuracy: 0.4396   
+epoch: 50
+train: accuracy: 0.4607   loss: 1.9715   
+valid: accuracy: 0.4391   
+epoch: 51
+train: accuracy: 0.4612   loss: 1.9702   
+valid: accuracy: 0.4391   
+epoch: 52
+train: accuracy: 0.4613   loss: 1.9686   
+valid: accuracy: 0.4375   
+epoch: 53
+train: accuracy: 0.4621   loss: 1.9676   
+valid: accuracy: 0.4399   
+epoch: 54
+train: accuracy: 0.4627   loss: 1.9660   
+valid: accuracy: 0.4391   
+epoch: 55
+train: accuracy: 0.4632   loss: 1.9649   
+valid: accuracy: 0.4403   
+epoch: 56
+train: accuracy: 0.4639   loss: 1.9635   
+valid: accuracy: 0.4392   
+epoch: 57
+train: accuracy: 0.4643   loss: 1.9623   
+valid: accuracy: 0.4400   
+epoch: 58
+train: accuracy: 0.4651   loss: 1.9611   
+valid: accuracy: 0.4409   
+epoch: 59
+train: accuracy: 0.4653   loss: 1.9599   
+valid: accuracy: 0.4400   
+epoch: 60
+train: accuracy: 0.4659   loss: 1.9586   
+valid: accuracy: 0.4393   
+epoch: 61
+train: accuracy: 0.4662   loss: 1.9578   
+valid: accuracy: 0.4403   
+epoch: 62
+train: accuracy: 0.4665   loss: 1.9565   
+valid: accuracy: 0.4391   
+epoch: 63
+train: accuracy: 0.4672   loss: 1.9554   
+valid: accuracy: 0.4394   
+epoch: 64
+train: accuracy: 0.4678   loss: 1.9542   
+valid: accuracy: 0.4402   
+epoch: 65
+train: accuracy: 0.4679   loss: 1.9533   
+valid: accuracy: 0.4409   
+epoch: 66
+train: accuracy: 0.4683   loss: 1.9523   
+valid: accuracy: 0.4393   
+epoch: 67
+train: accuracy: 0.4691   loss: 1.9512   
+valid: accuracy: 0.4407   
+epoch: 68
+train: accuracy: 0.4693   loss: 1.9502   
+valid: accuracy: 0.4404   
+epoch: 69
+train: accuracy: 0.4697   loss: 1.9492   
+valid: accuracy: 0.4413   
+epoch: 70
+train: accuracy: 0.4700   loss: 1.9484   
+valid: accuracy: 0.4408   
+epoch: 71
+train: accuracy: 0.4705   loss: 1.9476   
+valid: accuracy: 0.4402   
+epoch: 72
+train: accuracy: 0.4707   loss: 1.9465   
+valid: accuracy: 0.4404   
+epoch: 73
+train: accuracy: 0.4709   loss: 1.9456   
+valid: accuracy: 0.4398   
+epoch: 74
+train: accuracy: 0.4715   loss: 1.9450   
+valid: accuracy: 0.4405   
+epoch: 75
+train: accuracy: 0.4717   loss: 1.9440   
+valid: accuracy: 0.4410   
+epoch: 76
+train: accuracy: 0.4722   loss: 1.9431   
+valid: accuracy: 0.4402   
+epoch: 77
+train: accuracy: 0.4725   loss: 1.9424   
+valid: accuracy: 0.4407   
+epoch: 78
+train: accuracy: 0.4729   loss: 1.9416   
+valid: accuracy: 0.4411   
+epoch: 79
+train: accuracy: 0.4729   loss: 1.9407   
+valid: accuracy: 0.4409   
+epoch: 80
+train: accuracy: 0.4734   loss: 1.9401   
+valid: accuracy: 0.4404   
+epoch: 81
+train: accuracy: 0.4739   loss: 1.9390   
+valid: accuracy: 0.4408   
+epoch: 82
+train: accuracy: 0.4741   loss: 1.9384   
+valid: accuracy: 0.4408   
+epoch: 83
+train: accuracy: 0.4746   loss: 1.9379   
+valid: accuracy: 0.4405   
+epoch: 84
+train: accuracy: 0.4749   loss: 1.9371   
+valid: accuracy: 0.4403   
+epoch: 85
+train: accuracy: 0.4751   loss: 1.9365   
+valid: accuracy: 0.4412   
+epoch: 86
+train: accuracy: 0.4752   loss: 1.9359   
+valid: accuracy: 0.4407   
+epoch: 87
+train: accuracy: 0.4755   loss: 1.9352   
+valid: accuracy: 0.4406   
+epoch: 88
+train: accuracy: 0.4757   loss: 1.9345   
+valid: accuracy: 0.4405   
+epoch: 89
+train: accuracy: 0.4759   loss: 1.9339   
+valid: accuracy: 0.4407   
+epoch: 90
+train: accuracy: 0.4761   loss: 1.9334   
+valid: accuracy: 0.4402   
+epoch: 91
+train: accuracy: 0.4765   loss: 1.9328   
+valid: accuracy: 0.4407   
+epoch: 92
+train: accuracy: 0.4767   loss: 1.9321   
+valid: accuracy: 0.4405   
+epoch: 93
+train: accuracy: 0.4771   loss: 1.9315   
+valid: accuracy: 0.4403   
+epoch: 94
+train: accuracy: 0.4771   loss: 1.9310   
+valid: accuracy: 0.4402   
+epoch: 95
+train: accuracy: 0.4774   loss: 1.9303   
+valid: accuracy: 0.4405   
+epoch: 96
+train: accuracy: 0.4778   loss: 1.9299   
+valid: accuracy: 0.4408   
+epoch: 97
+train: accuracy: 0.4779   loss: 1.9293   
+valid: accuracy: 0.4409   
+epoch: 98
+train: accuracy: 0.4781   loss: 1.9288   
+valid: accuracy: 0.4404   
+epoch: 99
+train: accuracy: 0.4785   loss: 1.9284   
+valid: accuracy: 0.4414   
+epoch: 100
+train: accuracy: 0.4785   loss: 1.9277   
+valid: accuracy: 0.4412   
+best epoch: 99
+best valid: accuracy: 0.4414   
