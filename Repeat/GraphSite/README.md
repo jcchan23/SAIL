@@ -57,8 +57,6 @@ To reproduce all the results, please follow these steps:
 
 Baidu drive: 链接：https://pan.baidu.com/s/1Q5SzrLhOCtUaNHzSDhUGFA 提取码：1l4e 
 
-Google drive: [Link](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing)
-
 *Note: The `./GraphSite/source` folder also contains a zip file with all Alphafold2 predicted structure and their corresponding distance map between residues, you can refer `./data/build_features.py` to regenerate all node features and edge features, which have been downloaded in (1).*
 
 (2) Run:

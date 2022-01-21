@@ -83,8 +83,6 @@ To reproduce all the results, please follow these steps:
 
 Baidu drive: 链接：https://pan.baidu.com/s/1Q5SzrLhOCtUaNHzSDhUGFA 提取码：1l4e 
 
-Google drive: [Link](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing)
-
 (2) Run:
 
 `python dataset_esol.py`
