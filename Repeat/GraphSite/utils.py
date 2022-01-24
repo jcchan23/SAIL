@@ -32,30 +32,7 @@ def seed_everything(seed=2021):
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
     
-
-def load_dataset(path, mode=None):
-    if mode == 'pickle':
-        with open(path, 'rb') as f:
-            names, sequences, labels = pickle.load(f)
-    else:
-        with open(path, 'r') as f:
-            lines = f.readlines()
-        
-        names, sequences, labels = list(), list(), list()    
-        for idx, line in enumerate(lines):
-            line = line.strip()
-            if line == "":
-                continue
-            elif idx % 3 == 0:
-                names.append(line[1:])
-            elif idx % 3 == 1:
-                sequences.append(line)
-            else:
-                labels.append([int(num) for num in line])
-        
-    return names, sequences, labels
-
-
+    
 def initialize_weights(model):
     """
     Initializes the weights of a model in place.
