@@ -52,7 +52,7 @@ class ProteinDataset(Dataset):
         return self.names[idx], self.sequences[idx], self.graphs[idx], self.labels[idx]
     
     def get_features_dim(self):
-        return self.graphs[0].ndata['x'].shape[1], None
+        return max([graph.ndata['x'].shape[1] if len(graph.edata['x'].shape) > 1 else 0 for graph in self.graphs]), None
         
 
 def load_dataset(path):
