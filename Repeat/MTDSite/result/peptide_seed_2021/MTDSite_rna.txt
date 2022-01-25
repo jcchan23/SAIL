@@ -1,0 +1,12 @@
+rna size: 17
+fold 1: accuracy: 0.8517   auroc: 0.7621   mcc: 0.2332   precision: 0.2067   sensitive: 0.4499   specificity: 0.8797   threshold: 0.0800   
+fold 10: accuracy: 0.8184   auroc: 0.7654   mcc: 0.2368   precision: 0.1873   sensitive: 0.5355   specificity: 0.8381   threshold: 0.0700   
+fold 2: accuracy: 0.8542   auroc: 0.7794   mcc: 0.2535   precision: 0.2183   sensitive: 0.4792   specificity: 0.8803   threshold: 0.0800   
+fold 3: accuracy: 0.8494   auroc: 0.7558   mcc: 0.2132   precision: 0.1955   sensitive: 0.4205   specificity: 0.8793   threshold: 0.0700   
+fold 4: accuracy: 0.8386   auroc: 0.7625   mcc: 0.2194   precision: 0.1912   sensitive: 0.4572   specificity: 0.8652   threshold: 0.0800   
+fold 5: accuracy: 0.8505   auroc: 0.7540   mcc: 0.2119   precision: 0.1956   sensitive: 0.4156   specificity: 0.8809   threshold: 0.0700   
+fold 6: accuracy: 0.8722   auroc: 0.7737   mcc: 0.2384   precision: 0.2282   sensitive: 0.4034   specificity: 0.9049   threshold: 0.0800   
+fold 7: accuracy: 0.8682   auroc: 0.7692   mcc: 0.2316   precision: 0.2206   sensitive: 0.4034   specificity: 0.9006   threshold: 0.0700   
+fold 8: accuracy: 0.8577   auroc: 0.7812   mcc: 0.2365   precision: 0.2133   sensitive: 0.4401   specificity: 0.8868   threshold: 0.0600   
+fold 9: accuracy: 0.8482   auroc: 0.7720   mcc: 0.2337   precision: 0.2043   sensitive: 0.4597   specificity: 0.8752   threshold: 0.0700   
+ensemble: accuracy: 0.8708   auroc: 0.7821   mcc: 0.2476   precision: 0.2313   sensitive: 0.4230   specificity: 0.9020   threshold: 0.0800   

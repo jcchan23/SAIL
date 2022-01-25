@@ -1,0 +1,152 @@
+epoch: 1
+train: accuracy: 0.8638   auroc: 0.5063   loss: 0.5173   mcc: 0.0088   precision: 0.1481   sensitive: 0.0185   specificity: 0.9848   threshold: 0.5000   
+valid: accuracy: 0.5755   auroc: 0.6814   mcc: 0.1971   precision: 0.2207   sensitive: 0.7276   specificity: 0.5488   threshold: 0.1800   
+epoch: 2
+train: accuracy: 0.8681   auroc: 0.5815   loss: 0.4485   mcc: 0.0059   precision: 0.1452   sensitive: 0.0110   specificity: 0.9908   threshold: 0.5000   
+valid: accuracy: 0.7858   auroc: 0.7559   mcc: 0.3064   precision: 0.3538   sensitive: 0.5257   specificity: 0.8314   threshold: 0.1700   
+epoch: 3
+train: accuracy: 0.8676   auroc: 0.6461   loss: 0.4327   mcc: 0.0144   precision: 0.1704   sensitive: 0.0149   specificity: 0.9896   threshold: 0.5000   
+valid: accuracy: 0.8284   auroc: 0.8016   mcc: 0.3666   precision: 0.4356   sensitive: 0.5029   specificity: 0.8856   threshold: 0.1900   
+epoch: 4
+train: accuracy: 0.8718   auroc: 0.7141   loss: 0.4055   mcc: 0.1411   precision: 0.4324   sensitive: 0.0780   specificity: 0.9854   threshold: 0.5000   
+valid: accuracy: 0.8506   auroc: 0.8201   mcc: 0.4182   precision: 0.5000   sensitive: 0.5124   specificity: 0.9100   threshold: 0.2600   
+epoch: 5
+train: accuracy: 0.8712   auroc: 0.7391   loss: 0.3942   mcc: 0.2058   precision: 0.4558   sensitive: 0.1482   specificity: 0.9747   threshold: 0.5000   
+valid: accuracy: 0.8518   auroc: 0.8344   mcc: 0.4425   precision: 0.5034   sensitive: 0.5581   specificity: 0.9033   threshold: 0.2300   
+epoch: 6
+train: accuracy: 0.8739   auroc: 0.7358   loss: 0.3911   mcc: 0.2217   precision: 0.4880   sensitive: 0.1531   specificity: 0.9770   threshold: 0.5000   
+valid: accuracy: 0.8452   auroc: 0.8402   mcc: 0.4395   precision: 0.4849   sensitive: 0.5810   specificity: 0.8916   threshold: 0.1700   
+epoch: 7
+train: accuracy: 0.8741   auroc: 0.7675   loss: 0.3760   mcc: 0.2486   precision: 0.4920   sensitive: 0.1882   specificity: 0.9722   threshold: 0.5000   
+valid: accuracy: 0.8546   auroc: 0.8426   mcc: 0.4673   precision: 0.5114   sensitive: 0.5981   specificity: 0.8997   threshold: 0.3400   
+epoch: 8
+train: accuracy: 0.8729   auroc: 0.7694   loss: 0.3730   mcc: 0.2682   precision: 0.4834   sensitive: 0.2233   specificity: 0.9659   threshold: 0.5000   
+valid: accuracy: 0.8506   auroc: 0.8489   mcc: 0.4791   precision: 0.5000   sensitive: 0.6419   specificity: 0.8873   threshold: 0.3100   
+epoch: 9
+train: accuracy: 0.8728   auroc: 0.7816   loss: 0.3691   mcc: 0.2733   precision: 0.4827   sensitive: 0.2318   specificity: 0.9645   threshold: 0.5000   
+valid: accuracy: 0.8347   auroc: 0.8322   mcc: 0.4308   precision: 0.4595   sensitive: 0.6057   specificity: 0.8749   threshold: 0.1600   
+epoch: 10
+train: accuracy: 0.8747   auroc: 0.7930   loss: 0.3611   mcc: 0.2890   precision: 0.4988   sensitive: 0.2450   specificity: 0.9648   threshold: 0.5000   
+valid: accuracy: 0.8541   auroc: 0.8432   mcc: 0.4669   precision: 0.5097   sensitive: 0.6000   specificity: 0.8987   threshold: 0.3100   
+epoch: 11
+train: accuracy: 0.8776   auroc: 0.7971   loss: 0.3554   mcc: 0.3260   precision: 0.5200   sensitive: 0.2886   specificity: 0.9619   threshold: 0.5000   
+valid: accuracy: 0.8478   auroc: 0.8452   mcc: 0.4681   precision: 0.4926   sensitive: 0.6305   specificity: 0.8860   threshold: 0.3000   
+epoch: 12
+train: accuracy: 0.8733   auroc: 0.7911   loss: 0.3582   mcc: 0.2980   precision: 0.4889   sensitive: 0.2674   specificity: 0.9600   threshold: 0.5000   
+valid: accuracy: 0.8566   auroc: 0.8505   mcc: 0.4828   precision: 0.5166   sensitive: 0.6229   specificity: 0.8977   threshold: 0.3200   
+epoch: 13
+train: accuracy: 0.8774   auroc: 0.8028   loss: 0.3550   mcc: 0.3287   precision: 0.5180   sensitive: 0.2947   specificity: 0.9608   threshold: 0.5000   
+valid: accuracy: 0.8677   auroc: 0.8495   mcc: 0.4724   precision: 0.5591   sensitive: 0.5410   specificity: 0.9251   threshold: 0.4000   
+epoch: 14
+train: accuracy: 0.8778   auroc: 0.7968   loss: 0.3537   mcc: 0.3372   precision: 0.5198   sensitive: 0.3074   specificity: 0.9594   threshold: 0.5000   
+valid: accuracy: 0.8441   auroc: 0.8454   mcc: 0.4644   precision: 0.4834   sensitive: 0.6381   specificity: 0.8803   threshold: 0.2800   
+epoch: 15
+train: accuracy: 0.8758   auroc: 0.8029   loss: 0.3515   mcc: 0.3204   precision: 0.5066   sensitive: 0.2903   specificity: 0.9595   threshold: 0.5000   
+valid: accuracy: 0.8600   auroc: 0.8496   mcc: 0.4775   precision: 0.5279   sensitive: 0.5943   specificity: 0.9067   threshold: 0.2000   
+epoch: 16
+train: accuracy: 0.8804   auroc: 0.8087   loss: 0.3473   mcc: 0.3496   precision: 0.5382   sensitive: 0.3128   specificity: 0.9616   threshold: 0.5000   
+valid: accuracy: 0.8654   auroc: 0.8459   mcc: 0.4717   precision: 0.5492   sensitive: 0.5524   specificity: 0.9204   threshold: 0.3000   
+epoch: 17
+train: accuracy: 0.8792   auroc: 0.8046   loss: 0.3495   mcc: 0.3385   precision: 0.5310   sensitive: 0.3003   specificity: 0.9621   threshold: 0.5000   
+valid: accuracy: 0.8509   auroc: 0.8470   mcc: 0.4780   precision: 0.5007   sensitive: 0.6381   specificity: 0.8883   threshold: 0.1800   
+epoch: 18
+train: accuracy: 0.8815   auroc: 0.8081   loss: 0.3482   mcc: 0.3516   precision: 0.5471   sensitive: 0.3089   specificity: 0.9634   threshold: 0.5000   
+valid: accuracy: 0.8640   auroc: 0.8440   mcc: 0.4573   precision: 0.5464   sensitive: 0.5276   specificity: 0.9231   threshold: 0.2700   
+epoch: 19
+train: accuracy: 0.8827   auroc: 0.8182   loss: 0.3388   mcc: 0.3575   precision: 0.5559   sensitive: 0.3116   specificity: 0.9644   threshold: 0.5000   
+valid: accuracy: 0.8657   auroc: 0.8475   mcc: 0.4757   precision: 0.5495   sensitive: 0.5600   specificity: 0.9194   threshold: 0.4100   
+epoch: 20
+train: accuracy: 0.8824   auroc: 0.8216   loss: 0.3369   mcc: 0.3790   precision: 0.5467   sensitive: 0.3552   specificity: 0.9579   threshold: 0.5000   
+valid: accuracy: 0.8634   auroc: 0.8469   mcc: 0.4727   precision: 0.5410   sensitive: 0.5657   specificity: 0.9157   threshold: 0.2900   
+epoch: 21
+train: accuracy: 0.8809   auroc: 0.8201   loss: 0.3355   mcc: 0.3724   precision: 0.5365   sensitive: 0.3530   specificity: 0.9564   threshold: 0.5000   
+valid: accuracy: 0.8688   auroc: 0.8459   mcc: 0.4786   precision: 0.5625   sensitive: 0.5486   specificity: 0.9251   threshold: 0.2700   
+epoch: 22
+train: accuracy: 0.8835   auroc: 0.8255   loss: 0.3323   mcc: 0.3753   precision: 0.5569   sensitive: 0.3401   specificity: 0.9613   threshold: 0.5000   
+valid: accuracy: 0.8626   auroc: 0.8478   mcc: 0.4724   precision: 0.5378   sensitive: 0.5695   specificity: 0.9140   threshold: 0.3300   
+epoch: 23
+train: accuracy: 0.8815   auroc: 0.8285   loss: 0.3326   mcc: 0.3725   precision: 0.5412   sensitive: 0.3489   specificity: 0.9577   threshold: 0.5000   
+valid: accuracy: 0.8603   auroc: 0.8475   mcc: 0.4704   precision: 0.5297   sensitive: 0.5771   specificity: 0.9100   threshold: 0.2600   
+epoch: 24
+train: accuracy: 0.8854   auroc: 0.8280   loss: 0.3283   mcc: 0.3902   precision: 0.5674   sensitive: 0.3562   specificity: 0.9611   threshold: 0.5000   
+valid: accuracy: 0.8688   auroc: 0.8468   mcc: 0.4810   precision: 0.5618   sensitive: 0.5543   specificity: 0.9241   threshold: 0.4200   
+epoch: 25
+train: accuracy: 0.8873   auroc: 0.8346   loss: 0.3247   mcc: 0.4067   precision: 0.5761   sensitive: 0.3764   specificity: 0.9604   threshold: 0.5000   
+valid: accuracy: 0.8592   auroc: 0.8444   mcc: 0.4661   precision: 0.5262   sensitive: 0.5733   specificity: 0.9094   threshold: 0.3700   
+epoch: 26
+train: accuracy: 0.8839   auroc: 0.8329   loss: 0.3241   mcc: 0.3993   precision: 0.5518   sensitive: 0.3859   specificity: 0.9551   threshold: 0.5000   
+valid: accuracy: 0.8501   auroc: 0.8466   mcc: 0.4594   precision: 0.4984   sensitive: 0.6019   specificity: 0.8936   threshold: 0.2500   
+epoch: 27
+train: accuracy: 0.8873   auroc: 0.8387   loss: 0.3158   mcc: 0.4160   precision: 0.5717   sensitive: 0.3964   specificity: 0.9575   threshold: 0.5000   
+valid: accuracy: 0.8703   auroc: 0.8465   mcc: 0.4798   precision: 0.5689   sensitive: 0.5429   specificity: 0.9278   threshold: 0.3600   
+epoch: 28
+train: accuracy: 0.8888   auroc: 0.8388   loss: 0.3175   mcc: 0.4138   precision: 0.5856   sensitive: 0.3801   specificity: 0.9615   threshold: 0.5000   
+valid: accuracy: 0.8549   auroc: 0.8411   mcc: 0.4556   precision: 0.5128   sensitive: 0.5714   specificity: 0.9047   threshold: 0.3400   
+epoch: 29
+train: accuracy: 0.8897   auroc: 0.8435   loss: 0.3106   mcc: 0.4290   precision: 0.5859   sensitive: 0.4059   specificity: 0.9590   threshold: 0.5000   
+valid: accuracy: 0.8643   auroc: 0.8481   mcc: 0.4781   precision: 0.5433   sensitive: 0.5733   specificity: 0.9154   threshold: 0.3700   
+epoch: 30
+train: accuracy: 0.8899   auroc: 0.8433   loss: 0.3103   mcc: 0.4325   precision: 0.5855   sensitive: 0.4122   specificity: 0.9583   threshold: 0.5000   
+valid: accuracy: 0.8603   auroc: 0.8447   mcc: 0.4610   precision: 0.5309   sensitive: 0.5562   specificity: 0.9137   threshold: 0.3200   
+epoch: 31
+train: accuracy: 0.8919   auroc: 0.8503   loss: 0.3063   mcc: 0.4473   precision: 0.5941   sensitive: 0.4300   specificity: 0.9580   threshold: 0.5000   
+valid: accuracy: 0.8515   auroc: 0.8416   mcc: 0.4517   precision: 0.5025   sensitive: 0.5790   specificity: 0.8993   threshold: 0.2700   
+epoch: 32
+train: accuracy: 0.8936   auroc: 0.8515   loss: 0.3037   mcc: 0.4501   precision: 0.6083   sensitive: 0.4217   specificity: 0.9611   threshold: 0.5000   
+valid: accuracy: 0.8595   auroc: 0.8487   mcc: 0.4770   precision: 0.5261   sensitive: 0.5962   specificity: 0.9057   threshold: 0.2300   
+epoch: 33
+train: accuracy: 0.8924   auroc: 0.8566   loss: 0.3001   mcc: 0.4507   precision: 0.5966   sensitive: 0.4337   specificity: 0.9580   threshold: 0.5000   
+valid: accuracy: 0.8512   auroc: 0.8443   mcc: 0.4644   precision: 0.5016   sensitive: 0.6076   specificity: 0.8940   threshold: 0.2800   
+epoch: 34
+train: accuracy: 0.8940   auroc: 0.8583   loss: 0.2941   mcc: 0.4610   precision: 0.6042   sensitive: 0.4444   specificity: 0.9584   threshold: 0.5000   
+valid: accuracy: 0.8703   auroc: 0.8496   mcc: 0.4822   precision: 0.5680   sensitive: 0.5486   specificity: 0.9268   threshold: 0.3500   
+epoch: 35
+train: accuracy: 0.8980   auroc: 0.8637   loss: 0.2908   mcc: 0.4798   precision: 0.6278   sensitive: 0.4551   specificity: 0.9614   threshold: 0.5000   
+valid: accuracy: 0.8768   auroc: 0.8561   mcc: 0.4966   precision: 0.5966   sensitive: 0.5410   specificity: 0.9358   threshold: 0.3200   
+epoch: 36
+train: accuracy: 0.8977   auroc: 0.8642   loss: 0.2880   mcc: 0.4806   precision: 0.6237   sensitive: 0.4603   specificity: 0.9603   threshold: 0.5000   
+valid: accuracy: 0.8597   auroc: 0.8428   mcc: 0.4588   precision: 0.5291   sensitive: 0.5543   specificity: 0.9134   threshold: 0.3200   
+epoch: 37
+train: accuracy: 0.8999   auroc: 0.8685   loss: 0.2820   mcc: 0.4932   precision: 0.6343   sensitive: 0.4722   specificity: 0.9610   threshold: 0.5000   
+valid: accuracy: 0.8615   auroc: 0.8493   mcc: 0.4731   precision: 0.5335   sensitive: 0.5771   specificity: 0.9114   threshold: 0.2600   
+epoch: 38
+train: accuracy: 0.9017   auroc: 0.8758   loss: 0.2759   mcc: 0.5076   precision: 0.6392   sensitive: 0.4927   specificity: 0.9602   threshold: 0.5000   
+valid: accuracy: 0.8532   auroc: 0.8517   mcc: 0.4756   precision: 0.5070   sensitive: 0.6229   specificity: 0.8936   threshold: 0.2000   
+epoch: 39
+train: accuracy: 0.9015   auroc: 0.8765   loss: 0.2730   mcc: 0.5048   precision: 0.6400   sensitive: 0.4871   specificity: 0.9608   threshold: 0.5000   
+valid: accuracy: 0.8637   auroc: 0.8452   mcc: 0.4692   precision: 0.5428   sensitive: 0.5562   specificity: 0.9177   threshold: 0.3200   
+epoch: 40
+train: accuracy: 0.9032   auroc: 0.8817   loss: 0.2671   mcc: 0.5150   precision: 0.6471   sensitive: 0.4980   specificity: 0.9611   threshold: 0.5000   
+valid: accuracy: 0.8538   auroc: 0.8461   mcc: 0.4698   precision: 0.5088   sensitive: 0.6076   specificity: 0.8970   threshold: 0.2700   
+epoch: 41
+train: accuracy: 0.9047   auroc: 0.8841   loss: 0.2633   mcc: 0.5217   precision: 0.6563   sensitive: 0.5010   specificity: 0.9625   threshold: 0.5000   
+valid: accuracy: 0.8529   auroc: 0.8428   mcc: 0.4627   precision: 0.5065   sensitive: 0.5962   specificity: 0.8980   threshold: 0.2900   
+epoch: 42
+train: accuracy: 0.9077   auroc: 0.8893   loss: 0.2567   mcc: 0.5434   precision: 0.6636   sensitive: 0.5319   specificity: 0.9614   threshold: 0.5000   
+valid: accuracy: 0.8518   auroc: 0.8430   mcc: 0.4692   precision: 0.5031   sensitive: 0.6152   specificity: 0.8933   threshold: 0.3000   
+epoch: 43
+train: accuracy: 0.9098   auroc: 0.8890   loss: 0.2565   mcc: 0.5527   precision: 0.6762   sensitive: 0.5361   specificity: 0.9633   threshold: 0.5000   
+valid: accuracy: 0.8444   auroc: 0.8336   mcc: 0.4514   precision: 0.4834   sensitive: 0.6095   specificity: 0.8856   threshold: 0.2400   
+epoch: 44
+train: accuracy: 0.9094   auroc: 0.8927   loss: 0.2520   mcc: 0.5536   precision: 0.6701   sensitive: 0.5436   specificity: 0.9617   threshold: 0.5000   
+valid: accuracy: 0.8626   auroc: 0.8376   mcc: 0.4520   precision: 0.5413   sensitive: 0.5238   specificity: 0.9221   threshold: 0.3500   
+epoch: 45
+train: accuracy: 0.9102   auroc: 0.8933   loss: 0.2494   mcc: 0.5536   precision: 0.6798   sensitive: 0.5341   specificity: 0.9640   threshold: 0.5000   
+valid: accuracy: 0.8296   auroc: 0.8367   mcc: 0.4431   precision: 0.4511   sensitive: 0.6495   specificity: 0.8612   threshold: 0.1900   
+epoch: 46
+train: accuracy: 0.9123   auroc: 0.8977   loss: 0.2448   mcc: 0.5692   precision: 0.6829   sensitive: 0.5585   specificity: 0.9629   threshold: 0.5000   
+valid: accuracy: 0.8549   auroc: 0.8442   mcc: 0.4644   precision: 0.5124   sensitive: 0.5905   specificity: 0.9013   threshold: 0.2800   
+epoch: 47
+train: accuracy: 0.9137   auroc: 0.9028   loss: 0.2387   mcc: 0.5776   precision: 0.6872   sensitive: 0.5692   specificity: 0.9629   threshold: 0.5000   
+valid: accuracy: 0.8424   auroc: 0.8383   mcc: 0.4620   precision: 0.4793   sensitive: 0.6400   specificity: 0.8779   threshold: 0.1700   
+epoch: 48
+train: accuracy: 0.9126   auroc: 0.9020   loss: 0.2371   mcc: 0.5693   precision: 0.6868   sensitive: 0.5549   specificity: 0.9638   threshold: 0.5000   
+valid: accuracy: 0.8475   auroc: 0.8423   mcc: 0.4568   precision: 0.4915   sensitive: 0.6076   specificity: 0.8896   threshold: 0.3100   
+epoch: 49
+train: accuracy: 0.9137   auroc: 0.9030   loss: 0.2377   mcc: 0.5805   precision: 0.6832   sensitive: 0.5783   specificity: 0.9616   threshold: 0.5000   
+valid: accuracy: 0.8304   auroc: 0.8405   mcc: 0.4483   precision: 0.4534   sensitive: 0.6571   specificity: 0.8609   threshold: 0.1800   
+epoch: 50
+train: accuracy: 0.9166   auroc: 0.9082   loss: 0.2302   mcc: 0.5923   precision: 0.7006   sensitive: 0.5819   specificity: 0.9644   threshold: 0.5000   
+valid: accuracy: 0.8580   auroc: 0.8399   mcc: 0.4583   precision: 0.5230   sensitive: 0.5619   specificity: 0.9100   threshold: 0.2400   
+best epoch: 35
+best valid: accuracy: 0.8768   auroc: 0.8561   mcc: 0.4966   precision: 0.5966   sensitive: 0.5410   specificity: 0.9358   threshold: 0.3200   

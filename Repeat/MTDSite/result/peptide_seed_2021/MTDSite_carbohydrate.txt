@@ -1,0 +1,12 @@
+carbohydrate size: 49
+fold 1: accuracy: 0.9120   auroc: 0.7397   mcc: 0.1628   precision: 0.1470   sensitive: 0.2874   specificity: 0.9360   threshold: 0.1300   
+fold 10: accuracy: 0.9263   auroc: 0.7357   mcc: 0.1740   precision: 0.1719   sensitive: 0.2598   specificity: 0.9519   threshold: 0.1700   
+fold 2: accuracy: 0.9223   auroc: 0.7430   mcc: 0.1728   precision: 0.1651   sensitive: 0.2717   specificity: 0.9472   threshold: 0.1400   
+fold 3: accuracy: 0.9305   auroc: 0.7314   mcc: 0.1560   precision: 0.1669   sensitive: 0.2205   specificity: 0.9577   threshold: 0.1500   
+fold 4: accuracy: 0.9068   auroc: 0.7368   mcc: 0.1623   precision: 0.1419   sensitive: 0.3012   specificity: 0.9301   threshold: 0.1300   
+fold 5: accuracy: 0.8883   auroc: 0.7427   mcc: 0.1595   precision: 0.1272   sensitive: 0.3445   specificity: 0.9092   threshold: 0.1000   
+fold 6: accuracy: 0.9022   auroc: 0.7332   mcc: 0.1778   precision: 0.1464   sensitive: 0.3406   specificity: 0.9237   threshold: 0.1100   
+fold 7: accuracy: 0.9066   auroc: 0.7396   mcc: 0.1631   precision: 0.1422   sensitive: 0.3031   specificity: 0.9298   threshold: 0.1100   
+fold 8: accuracy: 0.9224   auroc: 0.7379   mcc: 0.1731   precision: 0.1655   sensitive: 0.2717   specificity: 0.9474   threshold: 0.1100   
+fold 9: accuracy: 0.9183   auroc: 0.7513   mcc: 0.1621   precision: 0.1535   sensitive: 0.2677   specificity: 0.9433   threshold: 0.1300   
+ensemble: accuracy: 0.9135   auroc: 0.7532   mcc: 0.1887   precision: 0.1634   sensitive: 0.3248   specificity: 0.9361   threshold: 0.1200   

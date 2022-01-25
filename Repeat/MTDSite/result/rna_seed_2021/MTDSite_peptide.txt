@@ -1,0 +1,12 @@
+peptide size: 124
+fold 1: accuracy: 0.7664   auroc: 0.5936   mcc: 0.0764   precision: 0.0888   sensitive: 0.3462   specificity: 0.7911   threshold: 0.1000   
+fold 10: accuracy: 0.8018   auroc: 0.5886   mcc: 0.0676   precision: 0.0894   sensitive: 0.2793   specificity: 0.8325   threshold: 0.1100   
+fold 2: accuracy: 0.7838   auroc: 0.5912   mcc: 0.0703   precision: 0.0883   sensitive: 0.3099   specificity: 0.8117   threshold: 0.1100   
+fold 3: accuracy: 0.7826   auroc: 0.5839   mcc: 0.0687   precision: 0.0874   sensitive: 0.3087   specificity: 0.8105   threshold: 0.0900   
+fold 4: accuracy: 0.8077   auroc: 0.5818   mcc: 0.0694   precision: 0.0911   sensitive: 0.2741   specificity: 0.8391   threshold: 0.1000   
+fold 5: accuracy: 0.8264   auroc: 0.5904   mcc: 0.0730   precision: 0.0960   sensitive: 0.2523   specificity: 0.8602   threshold: 0.1200   
+fold 6: accuracy: 0.8364   auroc: 0.5908   mcc: 0.0738   precision: 0.0984   sensitive: 0.2383   specificity: 0.8716   threshold: 0.1900   
+fold 7: accuracy: 0.8296   auroc: 0.5978   mcc: 0.0776   precision: 0.0990   sensitive: 0.2553   specificity: 0.8634   threshold: 0.1400   
+fold 8: accuracy: 0.7743   auroc: 0.5924   mcc: 0.0752   precision: 0.0893   sensitive: 0.3327   specificity: 0.8003   threshold: 0.1800   
+fold 9: accuracy: 0.8262   auroc: 0.5934   mcc: 0.0793   precision: 0.0992   sensitive: 0.2635   specificity: 0.8593   threshold: 0.1300   
+ensemble: accuracy: 0.8120   auroc: 0.5964   mcc: 0.0809   precision: 0.0973   sensitive: 0.2881   specificity: 0.8428   threshold: 0.1300   

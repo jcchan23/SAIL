@@ -1,0 +1,12 @@
+dna size: 47
+fold 1: accuracy: 0.8817   auroc: 0.8366   mcc: 0.3905   precision: 0.3794   sensitive: 0.5429   specificity: 0.9144   threshold: 0.2600   
+fold 10: accuracy: 0.8801   auroc: 0.8421   mcc: 0.3757   precision: 0.3709   sensitive: 0.5223   specificity: 0.9146   threshold: 0.2700   
+fold 2: accuracy: 0.8793   auroc: 0.8323   mcc: 0.3631   precision: 0.3648   sensitive: 0.5029   specificity: 0.9156   threshold: 0.2900   
+fold 3: accuracy: 0.8773   auroc: 0.8459   mcc: 0.3720   precision: 0.3636   sensitive: 0.5269   specificity: 0.9111   threshold: 0.2500   
+fold 4: accuracy: 0.8791   auroc: 0.8443   mcc: 0.3715   precision: 0.3673   sensitive: 0.5189   specificity: 0.9139   threshold: 0.2500   
+fold 5: accuracy: 0.8691   auroc: 0.8446   mcc: 0.3796   precision: 0.3503   sensitive: 0.5726   specificity: 0.8977   threshold: 0.2100   
+fold 6: accuracy: 0.8798   auroc: 0.8448   mcc: 0.3954   precision: 0.3766   sensitive: 0.5600   specificity: 0.9107   threshold: 0.2900   
+fold 7: accuracy: 0.8849   auroc: 0.8416   mcc: 0.3784   precision: 0.3831   sensitive: 0.5074   specificity: 0.9212   threshold: 0.3300   
+fold 8: accuracy: 0.8623   auroc: 0.8435   mcc: 0.3634   precision: 0.3333   sensitive: 0.5669   specificity: 0.8907   threshold: 0.2900   
+fold 9: accuracy: 0.8811   auroc: 0.8442   mcc: 0.3798   precision: 0.3746   sensitive: 0.5257   specificity: 0.9154   threshold: 0.2700   
+ensemble: accuracy: 0.8883   auroc: 0.8569   mcc: 0.4003   precision: 0.3986   sensitive: 0.5326   specificity: 0.9226   threshold: 0.3000   
