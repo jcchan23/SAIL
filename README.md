@@ -21,11 +21,13 @@ SAIL-Lab统一代码库
 
 ### CMPNN
 - [ ] 根据[Moleculenet](https://moleculenet.org/datasets-1)中收集的数据集，增加Quantum Mechanics系列和Biophysics系列中提到的数据集结果。
-- [ ] 根据[OGB](https://ogb.stanford.edu/)中收集的数据集，增加结果。
+- [x] 根据[OGB](https://ogb.stanford.edu/)中收集的数据集。
+- [ ] 完成OGB中数据集的结果。
 
 ### CoMPT
 - [x] 代码进度0%
-- [ ] 代码进度30%
+- [x] 代码进度30%
+- [ ] 检查训练不稳定的问题。
 
 ### CrystalNet
 - [ ] 检查重现代码的性能与原始实现性能相差较大的问题。
