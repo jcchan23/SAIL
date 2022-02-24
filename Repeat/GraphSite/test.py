@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   test.py
-@Time    :   2022/01/18 09:38:55
+@Time    :   2022/02/24 14:26:30
 @Author  :   Jianwen Chen
 @Version :   1.0
 @Contact :   chenjw48@mail2.sysu.edu.cn
@@ -150,3 +150,4 @@ if __name__ == '__main__':
     
     for dataset_name in ['test_129', 'test_181']:
         test(dataset_name, args, device)
+        

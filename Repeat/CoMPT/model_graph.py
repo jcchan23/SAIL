@@ -13,7 +13,6 @@
 # common library
 import math
 import copy
-from re import L
 import numpy as np
 import torch
 import torch.nn as nn
@@ -199,10 +198,6 @@ def attention(query, key, value, batch_distance_matrix, batch_mask, dropout):
     
     node_hidden = torch.einsum('b h m n, b h n d -> b h m d', message, value)
     
-    if torch.isnan(node_hidden).any():
-        print("after update")
-        assert False
-
     edge_hidden = repeat(message, 'b h m1 m2 -> b h m1 m2 c', c=key.shape[-1]) * key
     
     return node_hidden, edge_hidden

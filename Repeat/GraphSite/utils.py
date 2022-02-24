@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   utils.py
-@Time    :   2022/01/18 09:22:11
+@Time    :   2022/02/24 14:11:39
 @Author  :   Jianwen Chen
 @Version :   1.0
 @Contact :   chenjw48@mail2.sysu.edu.cn
@@ -32,7 +32,30 @@ def seed_everything(seed=2021):
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
     
-    
+
+def load_dataset(path, mode=None):
+    if mode == 'pickle':
+        with open(path, 'rb') as f:
+            names, sequences, labels = pickle.load(f)
+    else:
+        with open(path, 'r') as f:
+            lines = f.readlines()
+        
+        names, sequences, labels = list(), list(), list()    
+        for idx, line in enumerate(lines):
+            line = line.strip()
+            if line == "":
+                continue
+            elif idx % 3 == 0:
+                names.append(line[1:])
+            elif idx % 3 == 1:
+                sequences.append(line)
+            else:
+                labels.append([int(num) for num in line])
+        
+    return names, sequences, labels
+
+
 def initialize_weights(model):
     """
     Initializes the weights of a model in place.
@@ -54,15 +77,23 @@ def loop(data_loader, model, optimizer, scheduler, device):
     
     for batch in data_loader:
         
-        names, sequences, graphs, labels, masks = batch
+        names, sequences, batch_node_features, batch_edge_features, labels, label_masks = batch
         
-        graphs = graphs.to(device)
+        batch_masks = torch.sum(torch.abs(batch_node_features), dim=-1) != 0
+        
+        # [batch, max_length, node_dim]
+        batch_node_features = batch_node_features.to(device)
+        # [batch, max_length, max_length]
+        batch_edge_features = batch_edge_features.to(device)
+        # [batch, max_length]
+        batch_masks = batch_masks.to(device)
+        
         labels = labels.to(device)
-        masks = masks.to(device)    
-        outputs = model(graphs, device)
+        label_masks = label_masks.to(device)
+        outputs = model(batch_node_features, batch_edge_features, batch_masks, device)
         
         # loss calculation
-        loss = cal_loss(labels, outputs, masks)
+        loss = cal_loss(labels, outputs, label_masks)
         loss_sum += loss.data
         
         if optimizer is not None:
@@ -82,7 +113,7 @@ def loop(data_loader, model, optimizer, scheduler, device):
         scores = torch.softmax(outputs, dim=1)
         scores = scores.detach().cpu().numpy()
         scores = scores[:, 1]
-        for name, (idx, length) in zip(names, masks):
+        for name, (idx, length) in zip(names, label_masks):
             y_true.append(labels[idx:idx+length].tolist())
             y_pred.append(scores[idx:idx+length].tolist())
             predictions[name] = scores[idx:idx+length].tolist()

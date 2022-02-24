@@ -27,7 +27,7 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 
 |Dataset|Binding residues|Non-binding residues|% of binding residues|
 |:---:  |:---:               |:---:                   |:---:        |
-|Train_573|14479|145404|9.06|
+|Train_573|14479|145404|9,06|
 |Test_129 |2240|35275|5.97|
 |Test_181|3208|72050|4.26|
 
@@ -56,6 +56,8 @@ To reproduce all the results, please follow these steps:
 (1) Open the share link below, come to the `./GraphSite/preprocess` folder and download all zip files(about 700MB), put them into the `./data/preprocess` and finally unpack all the zip files.
 
 Baidu drive: 链接：https://pan.baidu.com/s/1Q5SzrLhOCtUaNHzSDhUGFA 提取码：1l4e 
+
+Google drive: [Link](https://drive.google.com/drive/folders/1sCi6KAMnIg4iaRD3yZxo58_fwBaqFSWT?usp=sharing)
 
 *Note: The `./GraphSite/source` folder also contains a zip file with all Alphafold2 predicted structure and their corresponding distance map between residues, you can refer `./data/build_features.py` to regenerate all node features and edge features, which have been downloaded in (1).*
 
@@ -119,8 +121,8 @@ result/
 
 + `train_fold_*.txt` is the name of train dataset.
 + `valid_fold_*.txt` is the name of validation dataset.
-+ `GraphSite_fold_*.txt/ckpt` is the train log / model of each fold.
-+ `GraphSite_<dataset_name>.txt/csv` is the test dataset performance and its corresponding predictions.
++ `GraphPPIS_fold_*.txt/ckpt` is the train log / model of each fold.
++ `GraphPPIS_<dataset_name>.txt/csv` is the test dataset performance and its corresponding predictions.
 
 ## Citation:
 

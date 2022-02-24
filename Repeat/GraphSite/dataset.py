@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   dataset.py
-@Time    :   2022/01/18 09:22:29
+@Time    :   2022/02/24 10:29:05
 @Author  :   Jianwen Chen
 @Version :   1.0
 @Contact :   chenjw48@mail2.sysu.edu.cn
@@ -11,7 +11,6 @@
 ######################################## import area ########################################
 
 # common library
-import dgl
 import torch
 import pickle
 import numpy as np
@@ -24,13 +23,37 @@ def get_loader(names_list, sequences_dict, graphs_dict, labels_dict, batch_size,
     dataset = ProteinDataset(names_list=names_list, sequences_dict=sequences_dict, graphs_dict=graphs_dict, labels_dict=labels_dict)
     return DataLoader(dataset=dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers, collate_fn=collate_fn), dataset.get_features_dim()
 
+
 def collate_fn(samples):
     names, sequences, graphs, labels = map(list, zip(*samples))
+    
+    # padding features
+    batch_node_features, batch_edge_features = list(), list()
+    max_length = max([len(sequence) for sequence in sequences])
+    for (node_features, edge_features) in graphs:
+        batch_node_features.append(pad_array(node_features, (max_length, max_length, node_features.shape[-1])))
+        batch_edge_features.append(pad_array(edge_features, (max_length, max_length)))
+    
+    # mask labels
     idx, masks = 0, list()
-    for graph in graphs:
-        masks.append([idx, graph.num_nodes()])
-        idx += graph.num_nodes()
-    return names, sequences, dgl.batch(graphs), torch.from_numpy(np.concatenate(labels, axis=-1).astype(np.int64)), torch.from_numpy(np.array(masks, dtype=np.int64))
+    for label in labels:
+        masks.append([idx, len(label)])
+        idx += len(label)
+    
+    return names, sequences, \
+        torch.from_numpy(np.array(batch_node_features)).float(),\
+        torch.from_numpy(np.array(batch_edge_features)).float(),\
+        torch.from_numpy(np.concatenate(labels, axis=-1)).long(),\
+        torch.from_numpy(np.array(masks)).long()
+    
+
+def pad_array(array, shape):
+    padded_array = np.zeros(shape, dtype=np.int32)
+    if len(shape) == 2:
+        padded_array[:array.shape[0], :array.shape[1]] = array
+    elif len(shape) == 3:
+        padded_array[:array.shape[0], :array.shape[1], :] = array
+    return padded_array
 
 
 def normalize_dis(mx):
@@ -47,8 +70,8 @@ def normalize_adj(mx):
     r_mat_inv = np.diag(r_inv)
     result = r_mat_inv @ mx @ r_mat_inv
     return result
-    
-    
+
+
 class ProteinDataset(Dataset):
     def __init__(self, names_list, sequences_dict, graphs_dict, labels_dict):
         super(ProteinDataset, self).__init__()
@@ -64,11 +87,8 @@ class ProteinDataset(Dataset):
         return self.names[idx], self.sequences[idx], self.graphs[idx], self.labels[idx]
     
     def get_features_dim(self):
-        # use an example will meet a single atom without edges
-        return max([graph.ndata['x'].shape[1] if len(graph.edata['x'].shape) > 1 else 0 for graph in self.graphs]), \
-            max([graph.edata['x'].shape[1] if len(graph.edata['x'].shape) > 1 else 0 for graph in self.graphs])
-
-        
+        return max([node_features.shape[1] for (node_features, _) in self.graphs]), None
+    
 
 def load_dataset(path):
     with open(path, 'r') as f:
@@ -90,7 +110,7 @@ def load_dataset(path):
             temp_name = ""
     return names_list, sequences_dict, labels_dict
 
-            
+
 ######################################## main area ########################################
 
 if __name__ == '__main__':
@@ -110,6 +130,7 @@ if __name__ == '__main__':
             pssm_features = np.load(f'{result_path}/features/pssm/{name}.npy')
             hmm_features = np.load(f'{result_path}/features/hmm/{name}.npy')
             dssp_features = np.load(f'{result_path}/features/dssp/{name}.npy')
+            
             # [L, 384 + 20 + 20 + 14 = 438]
             node_features = np.concatenate([af2_features, pssm_features, hmm_features, dssp_features], axis=-1)
 
@@ -118,27 +139,17 @@ if __name__ == '__main__':
             # mask the -1's rows and columns
             distance_map = np.where(distance_map >= 0, distance_map, float('inf'))
             distance_weight = normalize_dis(distance_map)
-            distance_weight = distance_weight / (np.sum(distance_weight, axis=-1, keepdims=True) + 1e-5)
-            
-            # [L, L] -> [num_edges, 1]
-            edge_features = distance_weight[np.nonzero(distance_weight)].reshape(-1, 1)
-            
-            # build dgl graph
-            src, dst = np.nonzero(distance_weight)
-            graph = dgl.graph((src, dst), num_nodes=len(sequence))
+            edge_features = distance_weight / (np.sum(distance_weight, axis=-1, keepdims=True) + 1e-5)
             
             if not len(sequence) == len(label) == node_features.shape[0]:
                 print(f"{dataset_name} {name} sequence, label, node features error!")
                 assert False
-            if not len(edge_features) == len(src) == len(dst):
+            if not len(sequence) == edge_features.shape[0] == edge_features.shape[1]:
                 print(f"{dataset_name} {name} edge features error!")
                 assert False
-
-            # only node features
-            graph.ndata['x'] = torch.from_numpy(node_features).float()
-            graph.edata['x'] = torch.from_numpy(edge_features).float()
-            graphs_dict[name] = graph
-
+            
+            graphs_dict[name] = (node_features, edge_features)
+            
         # save graphs
         with open(f'{result_path}/{dataset_name}.pickle', 'wb') as fw:
             pickle.dump([names_list, sequences_dict, graphs_dict, labels_dict], fw)

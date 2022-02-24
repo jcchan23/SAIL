@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 '''
 @File    :   train.py
-@Time    :   2022/01/18 09:22:21
+@Time    :   2022/02/24 14:11:12
 @Author  :   Jianwen Chen
 @Version :   1.0
 @Contact :   chenjw48@mail2.sysu.edu.cn
@@ -81,7 +81,7 @@ if __name__ == '__main__':
     with open(f'{args.data_path}/train_569.pickle', 'rb') as f:
         # names = list(), others = dict() with key in names
         train_valid_names, train_valid_sequences, train_valid_graphs, train_valid_labels = pickle.load(f)
-
+        
     # split dataset (if need!)
     if not os.path.exists(f'{args.result_path}/seed_{args.seed}'):
 
@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
     # summary
     print(f'train size: {len(train_names):,} | valid size: {len(valid_names):,}')
-
+    
     ######################################## model setting area ########################################
     
     # model
