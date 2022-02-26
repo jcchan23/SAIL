@@ -31,7 +31,7 @@ def collate_fn(samples):
     batch_node_features, batch_edge_features = list(), list()
     max_length = max([len(sequence) for sequence in sequences])
     for (node_features, edge_features) in graphs:
-        batch_node_features.append(pad_array(node_features, (max_length, max_length, node_features.shape[-1])))
+        batch_node_features.append(pad_array(node_features, (max_length, node_features.shape[-1])))
         batch_edge_features.append(pad_array(edge_features, (max_length, max_length)))
     
     # mask labels
@@ -48,7 +48,7 @@ def collate_fn(samples):
     
 
 def pad_array(array, shape):
-    padded_array = np.zeros(shape, dtype=np.int32)
+    padded_array = np.zeros(shape, dtype=np.float64)
     if len(shape) == 2:
         padded_array[:array.shape[0], :array.shape[1]] = array
     elif len(shape) == 3:

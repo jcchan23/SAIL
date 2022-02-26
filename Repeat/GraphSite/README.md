@@ -1,6 +1,6 @@
-# GraphSite-dgl
+# GraphSite
 
-Reimplementation of the GraphSite model by using dgl.
+Reimplementation of the GraphSite model by using pytorch.
 
 The original implementation could be referred at [GraphSite](https://github.com/biomed-AI/GraphSite).
 
@@ -13,7 +13,7 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 ## Dependencies
 + cuda == 10.2
 + cudnn == 7.6.5
-+ dgl-cu10.2 == 0.7.2
++ einops == 0.4.0
 + numpy == 1.19.1
 + pandas == 1.1.0
 + python == 3.7.7
@@ -35,19 +35,13 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
 |GraphSite    |0.915±0.001|0.934|0.917|
-|GraphSite-dgl|0.915±0.004|0.925|0.907|
+|GraphSite-dgl|-|-|-|
 
 *3. Performance comparision on AUPRC*
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
 |GraphSite    |0.589±0.003|0.544|0.369|
-|GraphSite-dgl|0.590±0.022|0.514|0.350|
-
-*Note:*
-
-*(1) I have tuned many combinations of hyper-parameters but still find that there will be a 2 points gap between the dgl and the original implementation.*
-
-*(2) This graph transformer model may cost a large GPU memory(about 16GB) in a short time, so I train the model on the GeForce RTX 3090 instead of GeForce GTX 1080 ti.*
+|GraphSite-dgl|-|-|-|
 
 ## Running
 
@@ -69,7 +63,7 @@ it will generate a pickle file in the `./data/preprocess` with the same dataset 
 
 + `names_list:` All protein names in the dataset.
 + `sequences_dict:` Unique protein names -> protein sequence.
-+ `graphs_dict:` Unique protein names -> dgl graph object.
++ `graphs_dict:` Unique protein names -> the tuple with node features and distance map.
 + `labels_dict:` Unique protein names -> label list.
 
 (3) Run:
