@@ -40,7 +40,7 @@ parser.add_argument('--learning_rate', type=float, default=1e-4,
                     help='The learning rate of ADAM optimization.')
 parser.add_argument('--max_epochs', type=int, default=50,
                     help='The maximum epoch of training')
-parser.add_argument('--batch_size', type=int, default=2,
+parser.add_argument('--batch_size', type=int, default=4,
                     help='The batch size')
 parser.add_argument('--result_path', type=str, default='./result',
                     help='The name of result path, for logs, predictions, best models, etc.')
@@ -50,7 +50,7 @@ parser.add_argument('--run_fold', type=int, default=0, choices=[1, 2, 3, 4, 5],
 parser.add_argument('--data_path', type=str, default='./data/preprocess',
                     help='The full path of features of the data.')
 # model setting
-parser.add_argument('--hidden_features_dim', type=int, default=64,
+parser.add_argument('--hidden_features_dim', type=int, default=128,
                     help="the hidden feature dimension in the network.")
 parser.add_argument('--output_features_dim', type=int, default=2,
                     help="the output feature dimension in the network.")
@@ -123,10 +123,10 @@ if __name__ == '__main__':
     # optimizer, scheduler
     optimizer = torch.optim.Adam(model.parameters(),betas=(0.9, 0.99), weight_decay=0.00001, eps=1e-5)
     scheduler = NoamLR(optimizer, warmup_epochs=[5], total_epochs=[args.max_epochs], steps_per_epoch=len(train_loader),
-                       init_lr=[0], max_lr=[args.learning_rate * 3], final_lr=[args.learning_rate])
+                       init_lr=[0], max_lr=[args.learning_rate * 5], final_lr=[args.learning_rate])
     
     # initital weight and model summary
-    # initialize_weights(model)
+    initialize_weights(model)
     print(model)
     
     ######################################## training area ########################################

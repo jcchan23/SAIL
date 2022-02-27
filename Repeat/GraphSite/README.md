@@ -34,14 +34,14 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 *2. Performance comparision on AUROC*
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
-|GraphSite    |0.915±0.001|0.934|0.917|
-|GraphSite-dgl|-|-|-|
+|GraphSite-origin|0.915±0.001|0.934|0.917|
+|GraphSite-re|0.921±0.005|0.933|0.910|
 
 *3. Performance comparision on AUPRC*
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
-|GraphSite    |0.589±0.003|0.544|0.369|
-|GraphSite-dgl|-|-|-|
+|GraphSite-origin|0.589±0.003|0.544|0.369|
+|GraphSite-re|0.602±0.027|0.530|0.359|
 
 ## Running
 

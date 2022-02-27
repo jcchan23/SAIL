@@ -41,7 +41,7 @@ parser.add_argument('--learning_rate', type=float, default=1e-4,
                     help='The learning rate of ADAM optimization.')
 parser.add_argument('--max_epochs', type=int, default=50,
                     help='The maximum epoch of training')
-parser.add_argument('--batch_size', type=int, default=2,
+parser.add_argument('--batch_size', type=int, default=4,
                     help='The batch size')
 parser.add_argument('--result_path', type=str, default='./result',
                     help='The name of result path, for logs, predictions, best models, etc.')
@@ -51,7 +51,7 @@ parser.add_argument('--run_fold', type=int, default=0, choices=[0, 1, 2, 3, 4, 5
 parser.add_argument('--data_path', type=str, default='./data/preprocess',
                     help='The full path of features of the data.')
 # model setting
-parser.add_argument('--hidden_features_dim', type=int, default=64,
+parser.add_argument('--hidden_features_dim', type=int, default=128,
                     help="the hidden feature dimension in the network.")
 parser.add_argument('--output_features_dim', type=int, default=2,
                     help="the output feature dimension in the network.")

@@ -13,7 +13,6 @@
 # common library
 import math
 import copy
-import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -154,13 +153,13 @@ def attention(query, key, value, batch_edge_features, batch_masks, num_neighbors
         batch_masks = repeat(batch_masks, 'b m -> b h c m', h=h, c=batch_masks.shape[-1])
         attention_scores = attention_scores.masked_fill(batch_masks==0, -1e12)
     
+    attention_scores = F.softmax(attention_scores / math.sqrt(d), dim=-1)
+    
     # find nearest neighbors, shape with = [batch, max_length, max_length]
     edge_weight_sorted_index = torch.argsort(torch.argsort(-batch_edge_features, axis=-1), axis=-1)
     edge_weight_sorted_mask  = (edge_weight_sorted_index < num_neighbors)
-    edge_weight = batch_edge_features * edge_weight_sorted_mask
-    edge_weight = edge_weight / (torch.sum(edge_weight, dim=-1, keepdim=True) + 1e-5)
-    
-    attention_scores = F.softmax(attention_scores * repeat(edge_weight, 'b m1 m2 -> b h m1 m2', h=h) / math.sqrt(d), dim=-1)
+    attention_scores = attention_scores * repeat(edge_weight_sorted_mask, 'b m1 m2 -> b h m1 m2', h=h)
+    attention_scores = attention_scores / (torch.sum(attention_scores, dim=-1, keepdim=True) + 1e-5)
     
     if dropout is not None:
         attention_scores = dropout(attention_scores)
@@ -277,9 +276,9 @@ class Generator(nn.Module):
 
 class GraphSite(nn.Module):
     def __init__(self, in_features, hidden_features=64, output_features=2,
-                 num_Emb_layers=2, dropout1=0.0,
-                 num_MHSA_layers=2, num_FFN_layers=2, num_attention_heads=4, num_neighbors=30, dropout2=0.0,
-                 num_Generator_layers=2, dropout3=0.0,
+                 num_Emb_layers=2, dropout1=0.2,
+                 num_MHSA_layers=3, num_FFN_layers=2, num_attention_heads=4, num_neighbors=30, dropout2=0.2,
+                 num_Generator_layers=2, dropout3=0.2,
                  scale_norm=False):
         super(GraphSite, self).__init__()
         
