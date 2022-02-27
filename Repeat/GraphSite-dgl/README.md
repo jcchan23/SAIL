@@ -35,13 +35,13 @@ The Briefings in Bioinformatics paper could be refered at [AlphaFold2-aware prot
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
 |GraphSite    |0.915±0.001|0.934|0.917|
-|GraphSite-dgl|0.915±0.004|0.925|0.907|
+|GraphSite-dgl|0.922±0.005|0.932|0.908|
 
 *3. Performance comparision on AUPRC*
 |Method|5-fold CV|Test_129|Test_181|
 |:---: |:---:| :---:| :---:|
 |GraphSite    |0.589±0.003|0.544|0.369|
-|GraphSite-dgl|0.590±0.022|0.514|0.350|
+|GraphSite-dgl|0.607±0.027|0.528|0.357|
 
 *Note:*
 

@@ -122,13 +122,18 @@ class Multi_Head_Self_Attention(nn.Module):
         return {'score':torch.sum(edges.src['k'] * edges.dst['q'], dim=-1, keepdim=True), 'v': edges.src['v'], 'weight': edges.data['x']}
     
     def reduce_func(self, nodes):
+        # calculate attention scores
+        attn = F.softmax(nodes.mailbox['score'] / math.sqrt(self.attention_hidden_features), dim=1)
+        
+        # select knn neighbors
         # mailbox['weight'].shape = [num_same_degree_nodes, degrees, 1]
+        # mailbox['score'].shape  = [num_same_degree_nodes, degrees, num_attention_heads, 1]
         edge_weight_sorted_index = torch.argsort(torch.argsort(-nodes.mailbox['weight'], axis=1), axis=1)
         edge_weight_sorted_mask = (edge_weight_sorted_index < self.num_neighbors)
-        edge_weight = nodes.mailbox['weight'] * edge_weight_sorted_mask
-        edge_weight = edge_weight / (torch.sum(edge_weight, dim=1, keepdim=True) + 1e-5)
-        # mailbox['score', 'v'].shape = [num_same_degree_nodes, degrees, num_attention_heads, 1]
-        attn = F.softmax(nodes.mailbox['score'] * edge_weight.unsqueeze(-2) / math.sqrt(self.attention_hidden_features), dim=1)
+        attn = attn * edge_weight_sorted_mask.unsqueeze(-2)
+        attn = attn / (torch.sum(attn, dim=1, keepdim=True) + 1e-5)
+        
+        # mailbox['v'].shape = [num_same_degree_nodes, degrees, num_attention_heads, 1]
         return {'h': torch.sum(attn * nodes.mailbox['v'], dim=1)}
     
     def forward(self, graphs):
@@ -195,9 +200,9 @@ class Generator(nn.Module):
 
 class GraphSite(nn.Module):
     def __init__(self, in_features, hidden_features=64, output_features=2,
-                 num_Emb_layers=2, dropout1=0.0,
-                 num_MHSA_layers=2, num_FFN_layers=2, num_attention_heads=4, num_neighbors=30, dropout2=0.0,
-                 num_Generator_layers=2, dropout3=0.0):
+                 num_Emb_layers=2, dropout1=0.2,
+                 num_MHSA_layers=3, num_FFN_layers=2, num_attention_heads=4, num_neighbors=30, dropout2=0.2,
+                 num_Generator_layers=2, dropout3=0.2):
         super(GraphSite, self).__init__()
         
         self.input_block = Node_Embedding(in_features, hidden_features, num_Emb_layers, dropout1)
