@@ -52,7 +52,7 @@ SAIL-Lab统一代码库
 ### GraphSite
 - [x] 代码进度60%
 
-### GraphSite
+### GraphSite-dgl
 - [x] 排查训练性能差距的问题。
 
 ### GraphSol
