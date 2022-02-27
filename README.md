@@ -25,6 +25,11 @@ SAIL-Lab统一代码库
 - [ ] 完成OGB中数据集的结果。
 
 ### CoMPT
+- [x] 代码进度100%
+- [ ] 完成Paper中数据集的结果
+- [ ] 完成OGB中数据集的结果
+
+### CoMPT-dgl
 - [x] 代码进度0%
 - [x] 代码进度30%
 - [ ] 检查训练不稳定的问题。
@@ -46,6 +51,9 @@ SAIL-Lab统一代码库
 
 ### GraphSite
 - [x] 代码进度60%
+
+### GraphSite
+- [x] 排查训练性能差距的问题。
 
 ### GraphSol
 - [x] 增加S.cerevisiae数据集的结果。
