@@ -40,8 +40,8 @@ SAIL-Lab统一代码库
 ### DeepANIS
 - [x] 代码进度0%
 - [x] 重新准备数据集
-- [ ] 实现transformer模块
-- [ ] 连接transformer模块与lstm模块
+- [x] 实现transformer模块
+- [x] 连接transformer模块与lstm模块
 
 ### Disorder
 - [ ] 交由师弟完成。
