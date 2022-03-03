@@ -52,17 +52,23 @@ def loop(data_loader, model, optimizer, scheduler, device):
     
     for batch in data_loader:
         
-        names, sequences, batch_cdrs, batch_node_features, labels, masks = batch
+        names, sequences, batch_cdrs, batch_node_features, labels, label_masks = batch
         
+        batch_masks = torch.sum(torch.abs(batch_node_features), dim=-1) != 0
+        # [batch, max_length]
         batch_cdrs = batch_cdrs.to(device)
+        # [batch, max_length, input_features]
         batch_node_features = batch_node_features.to(device)
+        # [batch, max_length]
+        batch_masks = batch_masks.to(device)
+        
         labels = labels.to(device)
-        outputs = model(batch_cdrs, batch_node_features, masks, device)
+        outputs = model(batch_cdrs, batch_node_features, batch_masks, label_masks, device)
         
         # loss calculation
         # pad_sequence need cpu in model forward and need gpu in loss calculation
-        masks = masks.to(device)
-        loss = cal_loss(labels, outputs, masks)
+        label_masks = label_masks.to(device)
+        loss = cal_loss(labels, outputs, label_masks)
         loss_sum += loss.data
         
         if optimizer is not None:
@@ -82,7 +88,7 @@ def loop(data_loader, model, optimizer, scheduler, device):
         scores = torch.softmax(outputs, dim=1)
         scores = scores.detach().cpu().numpy()
         scores = scores[:, 1]
-        for name, (idx, length) in zip(names, masks):
+        for name, (idx, length) in zip(names, label_masks):
             y_true.append(labels[idx:idx+length].tolist())
             y_pred.append(scores[idx:idx+length].tolist())
             predictions[name] = scores[idx:idx+length].tolist()

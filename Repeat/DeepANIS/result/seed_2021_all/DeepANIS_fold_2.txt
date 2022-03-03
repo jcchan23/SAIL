@@ -1,0 +1,152 @@
+epoch: 1
+train: auprc: 0.2168   auroc: 0.4843   f1: 0.2631   loss: 0.8110   mcc: -0.0182   threshold: 0.5000   
+valid: auprc: 0.3027   auroc: 0.6208   f1: 0.4577   mcc: 0.2213   threshold: 0.1665   
+epoch: 2
+train: auprc: 0.2520   auroc: 0.5437   f1: 0.1859   loss: 0.5988   mcc: 0.0168   threshold: 0.5000   
+valid: auprc: 0.4721   auroc: 0.8001   f1: 0.5950   mcc: 0.4524   threshold: 0.2567   
+epoch: 3
+train: auprc: 0.3215   auroc: 0.6441   f1: 0.2020   loss: 0.5339   mcc: 0.0617   threshold: 0.5000   
+valid: auprc: 0.5552   auroc: 0.8569   f1: 0.6578   mcc: 0.5549   threshold: 0.2133   
+epoch: 4
+train: auprc: 0.4380   auroc: 0.7743   f1: 0.2724   loss: 0.4406   mcc: 0.1476   threshold: 0.5000   
+valid: auprc: 0.5966   auroc: 0.8884   f1: 0.7084   mcc: 0.6180   threshold: 0.3642   
+epoch: 5
+train: auprc: 0.4888   auroc: 0.8109   f1: 0.3280   loss: 0.4092   mcc: 0.2014   threshold: 0.5000   
+valid: auprc: 0.6213   auroc: 0.9019   f1: 0.7417   mcc: 0.6595   threshold: 0.3467   
+epoch: 6
+train: auprc: 0.5121   auroc: 0.8253   f1: 0.3850   loss: 0.3994   mcc: 0.2552   threshold: 0.5000   
+valid: auprc: 0.6376   auroc: 0.9084   f1: 0.7388   mcc: 0.6577   threshold: 0.2572   
+epoch: 7
+train: auprc: 0.5457   auroc: 0.8469   f1: 0.5268   loss: 0.3879   mcc: 0.3892   threshold: 0.5000   
+valid: auprc: 0.6582   auroc: 0.9130   f1: 0.7422   mcc: 0.6594   threshold: 0.2954   
+epoch: 8
+train: auprc: 0.5765   auroc: 0.8629   f1: 0.5756   loss: 0.3748   mcc: 0.4433   threshold: 0.5000   
+valid: auprc: 0.6650   auroc: 0.9149   f1: 0.7396   mcc: 0.6593   threshold: 0.3803   
+epoch: 9
+train: auprc: 0.5892   auroc: 0.8657   f1: 0.5776   loss: 0.3731   mcc: 0.4449   threshold: 0.5000   
+valid: auprc: 0.6753   auroc: 0.9169   f1: 0.7494   mcc: 0.6679   threshold: 0.3199   
+epoch: 10
+train: auprc: 0.6050   auroc: 0.8711   f1: 0.5946   loss: 0.3684   mcc: 0.4671   threshold: 0.5000   
+valid: auprc: 0.6750   auroc: 0.9170   f1: 0.7418   mcc: 0.6603   threshold: 0.3065   
+epoch: 11
+train: auprc: 0.6118   auroc: 0.8713   f1: 0.5931   loss: 0.3663   mcc: 0.4642   threshold: 0.5000   
+valid: auprc: 0.6878   auroc: 0.9193   f1: 0.7341   mcc: 0.6522   threshold: 0.2432   
+epoch: 12
+train: auprc: 0.6191   auroc: 0.8748   f1: 0.6018   loss: 0.3638   mcc: 0.4755   threshold: 0.5000   
+valid: auprc: 0.6963   auroc: 0.9201   f1: 0.7278   mcc: 0.6489   threshold: 0.1070   
+epoch: 13
+train: auprc: 0.6250   auroc: 0.8774   f1: 0.5995   loss: 0.3597   mcc: 0.4728   threshold: 0.5000   
+valid: auprc: 0.7054   auroc: 0.9205   f1: 0.7440   mcc: 0.6633   threshold: 0.2555   
+epoch: 14
+train: auprc: 0.6384   auroc: 0.8789   f1: 0.5965   loss: 0.3557   mcc: 0.4709   threshold: 0.5000   
+valid: auprc: 0.6998   auroc: 0.9192   f1: 0.7385   mcc: 0.6600   threshold: 0.2199   
+epoch: 15
+train: auprc: 0.6395   auroc: 0.8839   f1: 0.6103   loss: 0.3513   mcc: 0.4868   threshold: 0.5000   
+valid: auprc: 0.6852   auroc: 0.9164   f1: 0.7400   mcc: 0.6601   threshold: 0.2442   
+epoch: 16
+train: auprc: 0.6468   auroc: 0.8834   f1: 0.6096   loss: 0.3503   mcc: 0.4871   threshold: 0.5000   
+valid: auprc: 0.6978   auroc: 0.9183   f1: 0.7367   mcc: 0.6538   threshold: 0.2765   
+epoch: 17
+train: auprc: 0.6541   auroc: 0.8859   f1: 0.6230   loss: 0.3479   mcc: 0.5021   threshold: 0.5000   
+valid: auprc: 0.7124   auroc: 0.9208   f1: 0.7443   mcc: 0.6659   threshold: 0.1629   
+epoch: 18
+train: auprc: 0.6624   auroc: 0.8898   f1: 0.6245   loss: 0.3425   mcc: 0.5061   threshold: 0.5000   
+valid: auprc: 0.7035   auroc: 0.9204   f1: 0.7426   mcc: 0.6637   threshold: 0.1587   
+epoch: 19
+train: auprc: 0.6707   auroc: 0.8901   f1: 0.6227   loss: 0.3415   mcc: 0.5036   threshold: 0.5000   
+valid: auprc: 0.7138   auroc: 0.9214   f1: 0.7326   mcc: 0.6522   threshold: 0.1420   
+epoch: 20
+train: auprc: 0.6605   auroc: 0.8874   f1: 0.6132   loss: 0.3455   mcc: 0.4922   threshold: 0.5000   
+valid: auprc: 0.7215   auroc: 0.9221   f1: 0.7330   mcc: 0.6531   threshold: 0.2636   
+epoch: 21
+train: auprc: 0.6644   auroc: 0.8918   f1: 0.6264   loss: 0.3393   mcc: 0.5076   threshold: 0.5000   
+valid: auprc: 0.7215   auroc: 0.9221   f1: 0.7458   mcc: 0.6672   threshold: 0.3338   
+epoch: 22
+train: auprc: 0.6824   auroc: 0.8957   f1: 0.6446   loss: 0.3362   mcc: 0.5310   threshold: 0.5000   
+valid: auprc: 0.7191   auroc: 0.9224   f1: 0.7498   mcc: 0.6707   threshold: 0.1967   
+epoch: 23
+train: auprc: 0.6795   auroc: 0.8953   f1: 0.6333   loss: 0.3340   mcc: 0.5177   threshold: 0.5000   
+valid: auprc: 0.7347   auroc: 0.9240   f1: 0.7398   mcc: 0.6592   threshold: 0.3445   
+epoch: 24
+train: auprc: 0.6794   auroc: 0.8953   f1: 0.6349   loss: 0.3348   mcc: 0.5185   threshold: 0.5000   
+valid: auprc: 0.7167   auroc: 0.9193   f1: 0.7361   mcc: 0.6574   threshold: 0.1415   
+epoch: 25
+train: auprc: 0.6816   auroc: 0.8963   f1: 0.6407   loss: 0.3340   mcc: 0.5268   threshold: 0.5000   
+valid: auprc: 0.7297   auroc: 0.9218   f1: 0.7435   mcc: 0.6634   threshold: 0.1944   
+epoch: 26
+train: auprc: 0.6914   auroc: 0.8970   f1: 0.6441   loss: 0.3329   mcc: 0.5306   threshold: 0.5000   
+valid: auprc: 0.7051   auroc: 0.9162   f1: 0.7369   mcc: 0.6497   threshold: 0.2593   
+epoch: 27
+train: auprc: 0.6813   auroc: 0.8965   f1: 0.6423   loss: 0.3342   mcc: 0.5287   threshold: 0.5000   
+valid: auprc: 0.7373   auroc: 0.9247   f1: 0.7429   mcc: 0.6656   threshold: 0.2448   
+epoch: 28
+train: auprc: 0.6976   auroc: 0.9029   f1: 0.6529   loss: 0.3246   mcc: 0.5427   threshold: 0.5000   
+valid: auprc: 0.7364   auroc: 0.9243   f1: 0.7345   mcc: 0.6553   threshold: 0.2348   
+epoch: 29
+train: auprc: 0.7010   auroc: 0.9020   f1: 0.6493   loss: 0.3260   mcc: 0.5376   threshold: 0.5000   
+valid: auprc: 0.7586   auroc: 0.9287   f1: 0.7436   mcc: 0.6662   threshold: 0.1868   
+epoch: 30
+train: auprc: 0.6991   auroc: 0.9022   f1: 0.6474   loss: 0.3245   mcc: 0.5351   threshold: 0.5000   
+valid: auprc: 0.7213   auroc: 0.9212   f1: 0.7502   mcc: 0.6707   threshold: 0.1787   
+epoch: 31
+train: auprc: 0.7124   auroc: 0.9053   f1: 0.6597   loss: 0.3208   mcc: 0.5510   threshold: 0.5000   
+valid: auprc: 0.7490   auroc: 0.9259   f1: 0.7492   mcc: 0.6685   threshold: 0.1914   
+epoch: 32
+train: auprc: 0.7125   auroc: 0.9059   f1: 0.6526   loss: 0.3189   mcc: 0.5422   threshold: 0.5000   
+valid: auprc: 0.7415   auroc: 0.9252   f1: 0.7432   mcc: 0.6645   threshold: 0.2262   
+epoch: 33
+train: auprc: 0.7107   auroc: 0.9048   f1: 0.6588   loss: 0.3197   mcc: 0.5501   threshold: 0.5000   
+valid: auprc: 0.7345   auroc: 0.9243   f1: 0.7516   mcc: 0.6722   threshold: 0.2091   
+epoch: 34
+train: auprc: 0.7098   auroc: 0.9072   f1: 0.6544   loss: 0.3164   mcc: 0.5449   threshold: 0.5000   
+valid: auprc: 0.7315   auroc: 0.9238   f1: 0.7387   mcc: 0.6610   threshold: 0.1247   
+epoch: 35
+train: auprc: 0.7281   auroc: 0.9112   f1: 0.6660   loss: 0.3111   mcc: 0.5599   threshold: 0.5000   
+valid: auprc: 0.7276   auroc: 0.9236   f1: 0.7408   mcc: 0.6617   threshold: 0.1686   
+epoch: 36
+train: auprc: 0.7286   auroc: 0.9093   f1: 0.6681   loss: 0.3139   mcc: 0.5625   threshold: 0.5000   
+valid: auprc: 0.7230   auroc: 0.9222   f1: 0.7350   mcc: 0.6573   threshold: 0.1965   
+epoch: 37
+train: auprc: 0.7307   auroc: 0.9110   f1: 0.6709   loss: 0.3114   mcc: 0.5664   threshold: 0.5000   
+valid: auprc: 0.7161   auroc: 0.9210   f1: 0.7354   mcc: 0.6568   threshold: 0.2867   
+epoch: 38
+train: auprc: 0.7380   auroc: 0.9106   f1: 0.6664   loss: 0.3130   mcc: 0.5603   threshold: 0.5000   
+valid: auprc: 0.7194   auroc: 0.9200   f1: 0.7465   mcc: 0.6662   threshold: 0.1532   
+epoch: 39
+train: auprc: 0.7379   auroc: 0.9114   f1: 0.6657   loss: 0.3100   mcc: 0.5606   threshold: 0.5000   
+valid: auprc: 0.7294   auroc: 0.9236   f1: 0.7456   mcc: 0.6655   threshold: 0.2942   
+epoch: 40
+train: auprc: 0.7351   auroc: 0.9144   f1: 0.6812   loss: 0.3089   mcc: 0.5793   threshold: 0.5000   
+valid: auprc: 0.7358   auroc: 0.9239   f1: 0.7409   mcc: 0.6597   threshold: 0.1550   
+epoch: 41
+train: auprc: 0.7348   auroc: 0.9118   f1: 0.6692   loss: 0.3092   mcc: 0.5645   threshold: 0.5000   
+valid: auprc: 0.7474   auroc: 0.9275   f1: 0.7419   mcc: 0.6664   threshold: 0.1374   
+epoch: 42
+train: auprc: 0.7546   auroc: 0.9151   f1: 0.6739   loss: 0.3035   mcc: 0.5708   threshold: 0.5000   
+valid: auprc: 0.7283   auroc: 0.9240   f1: 0.7619   mcc: 0.6838   threshold: 0.4388   
+epoch: 43
+train: auprc: 0.7498   auroc: 0.9172   f1: 0.6843   loss: 0.3035   mcc: 0.5837   threshold: 0.5000   
+valid: auprc: 0.7211   auroc: 0.9209   f1: 0.7237   mcc: 0.6433   threshold: 0.1916   
+epoch: 44
+train: auprc: 0.7487   auroc: 0.9162   f1: 0.6830   loss: 0.3053   mcc: 0.5821   threshold: 0.5000   
+valid: auprc: 0.7565   auroc: 0.9293   f1: 0.7450   mcc: 0.6686   threshold: 0.1156   
+epoch: 45
+train: auprc: 0.7577   auroc: 0.9189   f1: 0.6862   loss: 0.2981   mcc: 0.5876   threshold: 0.5000   
+valid: auprc: 0.7370   auroc: 0.9257   f1: 0.7412   mcc: 0.6625   threshold: 0.2452   
+epoch: 46
+train: auprc: 0.7686   auroc: 0.9224   f1: 0.6901   loss: 0.2949   mcc: 0.5914   threshold: 0.5000   
+valid: auprc: 0.7609   auroc: 0.9297   f1: 0.7492   mcc: 0.6725   threshold: 0.1785   
+epoch: 47
+train: auprc: 0.7731   auroc: 0.9226   f1: 0.6996   loss: 0.2926   mcc: 0.6042   threshold: 0.5000   
+valid: auprc: 0.7377   auroc: 0.9260   f1: 0.7492   mcc: 0.6744   threshold: 0.1973   
+epoch: 48
+train: auprc: 0.7729   auroc: 0.9220   f1: 0.6947   loss: 0.2941   mcc: 0.5981   threshold: 0.5000   
+valid: auprc: 0.7406   auroc: 0.9240   f1: 0.7467   mcc: 0.6670   threshold: 0.3309   
+epoch: 49
+train: auprc: 0.7739   auroc: 0.9232   f1: 0.6991   loss: 0.2921   mcc: 0.6041   threshold: 0.5000   
+valid: auprc: 0.7285   auroc: 0.9239   f1: 0.7500   mcc: 0.6715   threshold: 0.2137   
+epoch: 50
+train: auprc: 0.7861   auroc: 0.9265   f1: 0.7053   loss: 0.2870   mcc: 0.6121   threshold: 0.5000   
+valid: auprc: 0.7452   auroc: 0.9262   f1: 0.7523   mcc: 0.6745   threshold: 0.1965   
+best epoch: 46
+best valid: auprc: 0.7609   auroc: 0.9297   f1: 0.7492   mcc: 0.6725   threshold: 0.1785   
