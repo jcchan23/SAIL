@@ -25,11 +25,27 @@ The International Conference on Bioinformatics & Biomedicine paper could be refe
 
 ## Overview
 
-To be finished.
-
 *1. Statistics of the dataset.*
 
-277 antibody/antigen complexes -> 277 concatenated CDR sequences.
+The orginal dataset could be refered at [parapred](https://github.com/eliberis/parapred), it consists of 277 antibody/antigen complexes with the format below (the total dataset have been uploaded in `./data/source/dataset.csv`):
+
+|pdb|Hchain|Lchain|model|antigen_chain|
+|:---: |:---:| :---:| :---:| :---: |
+|4bz1|H|L|0|A|
+|3gbm|I|M|0|D & C|
+|2qqn|H|L|0|A|
+|……|……|……|……|……|
+
+There are 3 CDR regions on the H chain and L chain of each protein, namely `H1/H2/H3` and `L1/L2/L3`, respectively. We use the original numbering in the parapred, you can also check another numbering methods, such as [IMGT numbers](https://github.com/alchemab/parapred-pytorch).
+
+|CDR|H1|H2|H3|L1|L2|L3|
+|:---: |:---:| :---:| :---:| :---: |:---:|:---:|
+|Chothia Number|H24-H34|H50-H56|H89-H97|L26-L32|L52-L56|L95-L102|
+
+*Notes: According to the parapred, we also add two extra residue in the numbering, which means expand H24-H34 into H22-H36 in the H1 CDR.*
+
+Finally, when assigning the binding/non-binding label of each CDR residue, we follow the original consideration in the parapred, which defines binding residues as those with at least one atom found within **4.5Å** of any of the antigen atoms. 
+
 
 *2. Performance comparision on various metrics*
 |Method|AUPRC|AUROC|F1-Score|MCC|
