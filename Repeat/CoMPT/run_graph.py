@@ -21,7 +21,7 @@ from sklearn.model_selection import KFold
 
 # private library
 from dataset_graph import get_loader
-from utils import *
+from utils_graph import *
 
 # model library
 from model_graph import CoMPT

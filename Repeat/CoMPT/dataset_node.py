@@ -1,0 +1,193 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+@File    :   dataset_node.py
+@Time    :   2022/03/08 13:06:05
+@Author  :   Jianwen Chen
+@Version :   1.0
+@Contact :   chenjw48@mail2.sysu.edu.cn
+@License :   (C)Copyright 2021-2022, SAIL-Lab
+'''
+######################################## import area ########################################
+
+# common library
+import torch
+import pickle
+import numpy as np
+import pandas as pd
+from tqdm import tqdm
+from rdkit import Chem
+from rdkit import RDLogger
+from torch.utils.data import Dataset, DataLoader
+
+######################################## function area ########################################
+
+def get_loader(smiles_list, mols_dict, graphs_dict, labels_dict, batch_size, shuffle, num_workers):
+    dataset = MoleculeDataset(smiles_list, mols_dict, graphs_dict, labels_dict)
+    return DataLoader(dataset=dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers, collate_fn=collate_fn)
+
+
+def pad_array(array, shape, dtype):
+    padded_array = np.zeros(shape, dtype=dtype)
+    if len(shape) == 1:
+        padded_array[:array.shape[0]] = array
+    elif len(shape) == 2:
+        padded_array[:array.shape[0], :array.shape[1]] = array
+    elif len(shape) == 3:
+        padded_array[:array.shape[0], :array.shape[1], :] = array
+    return padded_array
+
+
+def collate_fn(samples):
+    smiles, mols, graphs, labels = map(list, zip(*samples))
+    
+    batch_node_features, batch_edge_features, batch_distance_matrix, batch_labels = list(), list(), list(), list()
+    max_length = max([distance_matrix.shape[0] for (node_features, edge_features, distance_matrix) in graphs])
+    
+    for (node_features, edge_features, distance_matrix), label in zip(graphs, labels):
+        batch_node_features.append(pad_array(node_features, (max_length, node_features.shape[-1]), dtype=np.int32))
+        batch_edge_features.append(pad_array(edge_features, (max_length, max_length, edge_features.shape[-1]), dtype=np.int32))
+        batch_distance_matrix.append(pad_array(distance_matrix, (max_length, max_length), dtype=np.int32))
+        batch_labels.append(pad_array(label, (max_length, 1), dtype=np.float32))
+    
+    return smiles, mols, \
+            torch.from_numpy(np.array(batch_node_features)).long(), \
+            torch.from_numpy(np.array(batch_edge_features)).long(), \
+            torch.from_numpy(np.array(batch_distance_matrix)).long(), \
+            torch.from_numpy(np.array(batch_labels)).float()
+
+
+def numeric(val, lst):
+    return lst.index(val) + 1 if val in lst else 0
+
+
+def get_atom_features(atom):
+    # 10 dimensions
+    return np.array([
+        numeric(atom.GetAtomicNum(), list(range(1, 120))),
+        numeric(atom.GetHybridization(), [
+            Chem.rdchem.HybridizationType.SP,
+            Chem.rdchem.HybridizationType.SP2,
+            Chem.rdchem.HybridizationType.SP3,
+            Chem.rdchem.HybridizationType.SP3D,
+            Chem.rdchem.HybridizationType.SP3D2,
+        ]),
+        numeric(atom.GetTotalDegree(), list(range(1, 9))),
+        numeric(atom.GetTotalNumHs(), list(range(1, 9))),
+        numeric(atom.GetFormalCharge(), list(range(-5, 6))),
+        numeric(atom.GetTotalValence(), list(range(1, 9))),
+        numeric(atom.GetNumRadicalElectrons(), list(range(1, 9))),
+        numeric(atom.GetIsAromatic(), list(range(2))),
+        numeric(atom.IsInRing(), list(range(2))),
+        int(atom.GetIdx() + 1)
+    ], dtype=np.int32)
+
+
+def get_bond_features(bond):
+    # 5 dimensions
+    return np.array([
+        numeric(bond.GetBondType(), [
+            Chem.rdchem.BondType.SINGLE,
+            Chem.rdchem.BondType.DOUBLE,
+            Chem.rdchem.BondType.TRIPLE,
+            Chem.rdchem.BondType.AROMATIC,
+        ]),
+        numeric(bond.GetStereo(), [
+            Chem.rdchem.BondStereo.STEREOANY,
+            Chem.rdchem.BondStereo.STEREOCIS,
+            Chem.rdchem.BondStereo.STEREOE,
+            Chem.rdchem.BondStereo.STEREONONE,
+            Chem.rdchem.BondStereo.STEREOTRANS,
+            Chem.rdchem.BondStereo.STEREOZ
+        ]),
+        numeric(bond.GetIsConjugated(), list(range(2))),
+        numeric(bond.GetIsAromatic(), list(range(2))),
+        numeric(bond.IsInRing(), list(range(2)))
+    ], dtype=np.int32)
+
+
+class MoleculeDataset(Dataset):
+    
+    def __init__(self, smiles_list, mols_dict, graphs_dict, labels_dict):
+        super(MoleculeDataset, self).__init__()
+        self.smiles = smiles_list
+        self.mols = [mols_dict[smile] for smile in smiles_list]
+        self.graphs = [graphs_dict[smile] for smile in smiles_list]
+        self.labels = [labels_dict[smile] for smile in smiles_list]
+    
+    def __len__(self):
+        return len(self.smiles)
+    
+    def __getitem__(self, idx):
+        return self.smiles[idx], self.mols[idx], self.graphs[idx], self.labels[idx]
+
+######################################## main area ########################################
+
+if __name__ == "__main__":
+    # Disable warning generated by rdkit c++
+    RDLogger.DisableLog('rdApp.*')
+    data_path = './data/source'
+    result_path = './data/preprocess'
+    
+    for element in ['1H', '13C']:
+        
+        with open(f'{data_path}/data_{element}.pickle', 'rb') as f:
+            all_data = pickle.load(f)
+        
+        for mode in ['train', 'test']:
+            data = all_data[f'{mode}_df']
+        
+            mols_list = data['rdmol'].values.tolist()
+            labels_list = data['value'].values.tolist()
+            
+            print(f'Building {element} {mode} graphs')
+            
+            smiles_list, mols_dict, graphs_dict, labels_dict = list(), dict(), dict(), dict()
+            
+            for mol, d_label in tqdm(zip(mols_list, labels_list), total=len(mols_list)):
+                
+                # check the sanitizemol
+                try:
+                    Chem.SanitizeMol(mol)
+                except:
+                    continue
+                # remove molecular with dot in the smile
+                if '.' in Chem.MolToSmiles(mol):
+                    continue
+                
+                # [dict] -> dict
+                d_label = d_label[0]
+            
+                # set stereochemistry
+                Chem.rdmolops.AssignAtomChiralTagsFromStructure(mol)
+                Chem.rdmolops.AssignStereochemistryFrom3D(mol)
+                
+                # (num_nodes, num_nodes)
+                distance_matrix = Chem.rdmolops.GetDistanceMatrix(mol).astype(np.int32)
+                
+                # (num_nodes, 10)
+                node_features = np.array([get_atom_features(atom) for atom in mol.GetAtoms()], dtype=np.int32)
+            
+                # (num_nodes, num_nodes, 5)
+                bond_features = np.zeros((mol.GetNumAtoms(), mol.GetNumAtoms(), 5), dtype=np.int32)
+                
+                for bond in mol.GetBonds():
+                    begin_idx = bond.GetBeginAtom().GetIdx()
+                    end_idx = bond.GetEndAtom().GetIdx()
+                    bond_features[begin_idx, end_idx, :] = bond_features[end_idx, begin_idx, :] = get_bond_features(bond)
+                    
+                # add all, re-smiled for keeping the consistent type of smile string.
+                smile = Chem.MolToSmiles(mol)
+                smiles_list.append(smile)
+                mols_dict[smile] = mol
+                graphs_dict[smile] = (node_features, bond_features, distance_matrix)
+                
+                label = np.zeros(mol.GetNumAtoms(), dtype=np.float32)
+                for idx, value in d_label.items():
+                    label[idx] = value
+                labels_dict[smile] = label.reshape(-1, 1)
+            
+            # store graph
+            with open(f'{result_path}/{element}_{mode}.pickle','wb') as fw:
+                pickle.dump([smiles_list, mols_dict, graphs_dict, labels_dict], fw)
+        
