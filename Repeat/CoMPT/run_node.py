@@ -187,26 +187,26 @@ if __name__ == '__main__':
             f.write(message)
             print(message)
     
-    ######################################## test area ########################################
+        ######################################## test area ########################################
     
-    # test stage
-    model = CoMPT(hidden_features=args.hidden_features_dim, output_features=args.task_number,
-                    num_MHSA_layers=args.num_MHSA_layers, num_attention_heads=args.num_attention_heads,
-                    num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout).to(device)
-    model.eval()
-    with torch.no_grad():
-        model.load_state_dict(torch.load(f'{args.result_path}/{args.data_name}_seed_{args.seed}/{model.__class__.__name__}.ckpt', map_location=device))
-        test_results = loop(data_loader=test_loader, model=model, optimizer=None, scheduler=None, device=device)
+        # test stage
+        model = CoMPT(hidden_features=args.hidden_features_dim, output_features=args.task_number,
+                        num_MHSA_layers=args.num_MHSA_layers, num_attention_heads=args.num_attention_heads,
+                        num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout).to(device)
+        model.eval()
+        with torch.no_grad():
+            model.load_state_dict(torch.load(f'{args.result_path}/{args.data_name}_seed_{args.seed}/{model.__class__.__name__}.ckpt', map_location=device))
+            test_results = loop(data_loader=test_loader, model=model, optimizer=None, scheduler=None, device=device)
 
-    # result summary
-    message = f"best epoch: {best_epoch}"
-    message += "\nbest valid: "
-    for k, v in sorted(best_results.items()):
-        message += f"{k}: {v:.4f}   "
-    message += f"\ntest: "
-    for k, v in sorted(test_results.items()):
-        message += f"{k}: {v:.4f}   "
-    message += "\n"
-    f.write(message)
-    print(message)
+        # result summary
+        message = f"best epoch: {best_epoch}"
+        message += "\nbest valid: "
+        for k, v in sorted(best_results.items()):
+            message += f"{k}: {v:.4f}   "
+        message += f"\ntest: "
+        for k, v in sorted(test_results.items()):
+            message += f"{k}: {v:.4f}   "
+        message += "\n"
+        f.write(message)
+        print(message)
     
