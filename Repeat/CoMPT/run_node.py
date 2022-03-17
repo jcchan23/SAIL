@@ -14,7 +14,6 @@
 import torch
 import os
 import argparse
-import numpy as np
 import pickle
 import warnings
 from sklearn.model_selection import train_test_split
@@ -56,15 +55,15 @@ parser.add_argument('--resplit', action='store_true', default=False,
 # model setting
 parser.add_argument('--hidden_features_dim', type=int, default=256,
                     help='the hidden features dimension')
-parser.add_argument('--num_MHSA_layers', type=int, default=4,
+parser.add_argument('--num_MHSA_layers', type=int, default=6,
                     help="the number of encoder layers")
 parser.add_argument('--num_attention_heads', type=int, default=4,
                     help="the number of attention heads")
-parser.add_argument('--num_FFN_layers', type=int, default=1,
+parser.add_argument('--num_FFN_layers', type=int, default=2,
                     help="the number of FFN layers")
 parser.add_argument('--num_Generator_layers', type=int, default=2,
                     help="the number of generator layers")
-parser.add_argument('--dropout', type=int, default=0.0,
+parser.add_argument('--dropout', type=int, default=0.1,
                     help="the dropout rate")
 # args executing
 args = parser.parse_args()
@@ -141,7 +140,7 @@ if __name__ == '__main__':
     # optimizer, scheduler
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
     scheduler = NoamLR(optimizer=optimizer, warmup_epochs=[5], total_epochs=[args.max_epochs],steps_per_epoch=len(train_loader),
-                       init_lr=[0], max_lr=[args.learning_rate * 10], final_lr=[args.learning_rate])
+                       init_lr=[0], max_lr=[args.learning_rate * 3], final_lr=[args.learning_rate])
 
     # initital weight and print model summary
     initialize_weights(model)

@@ -56,7 +56,7 @@ parser.add_argument('--split_type', type=str, default='scaffold',
 parser.add_argument('--resplit', action='store_true', default=False,
                     help="resplit the dataset with different comments")
 # model setting
-parser.add_argument('--hidden_features_dim', type=int, default=64,
+parser.add_argument('--hidden_features_dim', type=int, default=256,
                     help='the hidden features dimension')
 parser.add_argument('--num_MHSA_layers', type=int, default=3,
                     help="the number of encoder layers")
@@ -66,7 +66,7 @@ parser.add_argument('--num_FFN_layers', type=int, default=1,
                     help="the number of FFN layers")
 parser.add_argument('--num_Generator_layers', type=int, default=2,
                     help="the number of generator layers")
-parser.add_argument('--dropout', type=int, default=0.0,
+parser.add_argument('--dropout', type=int, default=0.2,
                     help="the dropout rate")
 # args executing
 args = parser.parse_args()

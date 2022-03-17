@@ -212,7 +212,7 @@ class Multi_Head_Self_Attention(nn.Module):
         
         self.num_attention_heads = num_attention_heads
         self.attention_hidden_features = hidden_features // num_attention_heads
-        self.layers = nn.ModuleList([nn.Linear(hidden_features, hidden_features) for _ in range(5)])
+        self.layers = nn.ModuleList([nn.Linear(hidden_features, hidden_features) for _ in range(6)])
         self.dropout = nn.Dropout(dropout)
         self.attenuation_lambda = nn.Parameter(torch.Tensor([1.0]), requires_grad=True)
         
@@ -262,23 +262,23 @@ class Encoder(nn.Module):
         self.norm = ScaleNorm(hidden_features) if scale_norm else LayerNorm(hidden_features)
         self.dropout = nn.Dropout(dropout)
     
-    def forward(self, batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask):
+    def forward(self, batch_node_features, batch_edge_features, batch_distance_matrix, batch_masks):
         
         for i in range(self.num_layers):
-            batch_node_features = self.dropout(self.norm(batch_node_features))
-            batch_node_hidden, batch_edge_hidden = self.MHSAs[i](batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask)
-            
+            # pre-norm
+            batch_node_hidden = self.dropout(self.norm(batch_node_features))
+            # MHSA
+            batch_node_hidden, batch_edge_features = self.MHSAs[i](batch_node_hidden, batch_edge_features, batch_distance_matrix, batch_masks)
+            # FFN
+            batch_node_hidden = self.FFNs[i](self.dropout(self.norm(batch_node_hidden)))
+            # residual
             batch_node_features = batch_node_features + batch_node_hidden
-            batch_edge_features = batch_edge_features + batch_edge_hidden
-            
-            batch_node_features = self.dropout(self.norm(batch_node_features))
-            batch_node_features = batch_node_features + self.FFNs[i](batch_node_features)
         
         return batch_node_features
 
 
 class Generator(nn.Module):
-    def __init__(self, hidden_features, output_features, num_layers, dropout):
+    def __init__(self, hidden_features, output_features, num_layers, dropout, scale_norm):
         super(Generator, self).__init__()
         if num_layers == 1:
             self.proj = nn.Linear(hidden_features, output_features)
@@ -288,7 +288,7 @@ class Generator(nn.Module):
                 self.proj.extend([
                     nn.Linear(hidden_features, hidden_features),
                     Mish(),
-                    nn.LayerNorm(hidden_features, elementwise_affine=True),
+                    ScaleNorm(hidden_features) if scale_norm else LayerNorm(hidden_features),
                     nn.Dropout(dropout)
                 ])
                 if i == num_layers - 1:
@@ -311,7 +311,7 @@ class CoMPT(nn.Module):
         self.input_edge_block = Edge_Embedding(hidden_features)
         self.position_block = Position_Encoding(hidden_features)
         self.hidden_block = Encoder(hidden_features, num_MHSA_layers, num_attention_heads, num_FFN_layers, dropout, scale_norm)
-        self.output_block = Generator(hidden_features, output_features, num_layers=num_Generator_layers, dropout=dropout)
+        self.output_block = Generator(hidden_features, output_features, num_layers=num_Generator_layers, dropout=dropout, scale_norm=scale_norm)
 
     def forward(self, batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask, device):
         
@@ -319,7 +319,7 @@ class CoMPT(nn.Module):
         batch_node_features = self.input_node_block(batch_node_features[:, :, :-1]) + self.position_block(batch_node_features[:, :, -1])
         
         # [batch, max_length, max_length, edge_dim] -> [batch, max_length, max_length, hidden_features]
-        batch_edge_features = self.input_edge_block(batch_edge_features)
+        batch_edge_features = self.input_edge_block(batch_edge_features) + rearrange(batch_node_features, 'b m d -> b m 1 d')
         
         # [batch, max_length, hidden_features]
         output = self.hidden_block(batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask)

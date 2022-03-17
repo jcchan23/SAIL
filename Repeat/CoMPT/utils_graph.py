@@ -127,7 +127,7 @@ def loop(data_loader, model, optimizer, scheduler, loss_name, metric_name, data_
         labels = labels.to(device)
         
         # (batch_size, args.task_number)
-        outputs = model(batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask, device)
+        outputs = model(batch_node_features, batch_edge_features, batch_distance_matrix, batch_masks, device)
     
         # loss calculation
         loss = cal_loss(y_true=labels, y_pred=outputs, loss_name=loss_name, data_mean=data_mean, data_std=data_std, device=device)
@@ -166,6 +166,10 @@ def cal_loss(y_true, y_pred, loss_name, data_mean, data_std, device):
         # convert labels to float
         y_true = y_true.float()
         loss = F.mse_loss(y_pred, y_true, reduction="sum") / y_true.shape[1]
+    elif loss_name == 'mae':
+        # convert labels to float
+        y_true = y_true.float()
+        loss = F.l1_loss(y_pred, y_true, reduction="sum") / y_true.shape[1]
     elif loss_name == 'bce':
         # convert labels to long
         y_true = y_true.long()

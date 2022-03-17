@@ -21,8 +21,7 @@ SAIL-Lab统一代码库
 
 ### CMPNN
 - [ ] 根据[Moleculenet](https://moleculenet.org/datasets-1)中收集的数据集，增加Quantum Mechanics系列和Biophysics系列中提到的数据集结果。
-- [x] 根据[OGB](https://ogb.stanford.edu/)中收集的数据集。
-- [ ] 完成OGB中数据集的结果。
+- [x] 根据[OGB](https://ogb.stanford.edu/)中收集的数据集，完成对应的结果。
 
 ### CoMPT
 - [x] 代码进度100%
