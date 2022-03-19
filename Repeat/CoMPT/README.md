@@ -79,7 +79,7 @@ This result could be refer from [GCN](https://jcheminf.biomedcentral.com/article
 
 *(4) The chemical shift prediction may be no need of edge hidden update, you can refer the line 271 for model_graph.py and model_node.py, otherwise will affect the final performance.*
 
-*(4) I have tried to add the gru layer in the pooling module and found the performance of chemical shift prediction drop a lot, while this layer will increase the protein binding site prediction(A CoMPT version optimized by protein), so there will be more works on it.*
+*(5) I have tried to add the gru layer in the pooling module and found the performance of chemical shift prediction drop a lot, while this layer will increase the protein binding site prediction(A CoMPT version optimized by protein), so there will be more works on it.*
 
 ## Running
 
