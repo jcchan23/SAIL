@@ -140,7 +140,7 @@ if __name__ == '__main__':
     # optimizer, scheduler
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
     scheduler = NoamLR(optimizer=optimizer, warmup_epochs=[5], total_epochs=[args.max_epochs],steps_per_epoch=len(train_loader),
-                       init_lr=[0], max_lr=[args.learning_rate * 3], final_lr=[args.learning_rate])
+                       init_lr=[0], max_lr=[args.learning_rate * 5], final_lr=[args.learning_rate])
 
     # initital weight and print model summary
     initialize_weights(model)

@@ -268,7 +268,7 @@ class Encoder(nn.Module):
             # pre-norm
             batch_node_hidden = self.dropout(self.norm(batch_node_features))
             # MHSA
-            batch_node_hidden, batch_edge_features = self.MHSAs[i](batch_node_hidden, batch_edge_features, batch_distance_matrix, batch_masks)
+            batch_node_hidden, _ = self.MHSAs[i](batch_node_hidden, batch_edge_features, batch_distance_matrix, batch_masks)
             # FFN
             batch_node_hidden = self.FFNs[i](self.dropout(self.norm(batch_node_hidden)))
             # residual
@@ -280,6 +280,7 @@ class Encoder(nn.Module):
 class Generator(nn.Module):
     def __init__(self, hidden_features, output_features, num_layers, dropout, scale_norm):
         super(Generator, self).__init__()
+        
         if num_layers == 1:
             self.proj = nn.Linear(hidden_features, output_features)
         else:
@@ -311,7 +312,7 @@ class CoMPT(nn.Module):
         self.input_edge_block = Edge_Embedding(hidden_features)
         self.position_block = Position_Encoding(hidden_features)
         self.hidden_block = Encoder(hidden_features, num_MHSA_layers, num_attention_heads, num_FFN_layers, dropout, scale_norm)
-        self.output_block = Generator(hidden_features, output_features, num_layers=num_Generator_layers, dropout=dropout, scale_norm=scale_norm)
+        self.output_block = Generator(hidden_features, output_features, num_layers=num_Generator_layers, dropout=0.0, scale_norm=scale_norm)
 
     def forward(self, batch_node_features, batch_edge_features, batch_distance_matrix, batch_mask, device):
         

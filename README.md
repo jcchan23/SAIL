@@ -25,7 +25,7 @@ SAIL-Lab统一代码库
 
 ### CoMPT
 - [x] 代码进度100%
-- [ ] 完成Paper中数据集的结果
+- [x] 完成Paper中数据集的结果
 
 ### CoMPT-dgl
 - [x] 代码进度0%
