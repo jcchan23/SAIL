@@ -210,7 +210,7 @@ class DeepANIS(nn.Module):
         else:
             self.lstm_fc = nn.Linear(hidden_features, hidden_features)
         # output
-        self.output_fc = nn.Linear(hidden_features, output_features)
+        self.output_fc = nn.Linear(hidden_features * 2, output_features)
         self.elu = nn.ELU(inplace=False)
         self.dropout = nn.Dropout(dropout, inplace=False)
 

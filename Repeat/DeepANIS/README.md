@@ -40,9 +40,9 @@ There are 3 CDR regions on the H chain and L chain of each protein, namely `H1/H
 
 |CDR|H1|H2|H3|L1|L2|L3|
 |:---: |:---:| :---:| :---:| :---: |:---:|:---:|
-|Chothia Number|H24-H34|H50-H56|H89-H97|L26-L32|L52-L56|L95-L102|
+|Chothia Number|H26-H32|H52-H56|H95-H102|L24-L34|L50-L56|L89-L97|
 
-*Notes: According to the parapred, we also add two extra residue in the numbering, which means expand H24-H34 into H22-H36 in the H1 CDR.*
+*Notes: According to the parapred, we also add two extra residue in the numbering, which means expand H26-H32 into H24-H34 in the H1 CDR.*
 
 Finally, when assigning the binding/non-binding label of each CDR residue, we follow the original consideration in the parapred, which defines binding residues as those with at least one atom found within **4.5Å** of any of the antigen atoms. 
 
@@ -51,9 +51,9 @@ Finally, when assigning the binding/non-binding label of each CDR residue, we fo
 |Method|AUPRC|AUROC|F1-Score|MCC|
 |:---: |:---:| :---:| :---:| :---: |
 |DeepANIS|0.706±0.005|0.888±0.002|0.694±0.002|0.574±0.004|
-|DeepANIS-re-LSTM|0.746±0.046|0.922±0.012|0.718±0.040|0.637±0.043|
-|DeepANIS-re-Transformer|0.742±0.051|0.923±0.012|0.717±0.038|0.581±0.018|
-|DeepANIS-re-all|0.744±0.048|0.922±0.011|0.711±0.035|0.630±0.038|
+|DeepANIS-re-LSTM|0.745±0.027|0.920±0.008|0.722±0.027|0.637±0.031|
+|DeepANIS-re-Transformer|0.728±0.024|0.916±0.008|0.713±0.025|0.625±0.029|
+|DeepANIS-re-all|0.752±0.024|0.921±0.008|0.722±0.027|0.630±0.028|
 
 ## Running
 

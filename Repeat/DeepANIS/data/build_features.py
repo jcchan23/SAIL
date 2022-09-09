@@ -138,13 +138,14 @@ if __name__ == '__main__':
     data = pd.read_csv(f'{data_path}/dataset.csv', sep=',')
     data_pdb, data_H, data_L, data_A = data['pdb'].values, data['Hchain'].values, data['Lchain'].values, data['antigen_chain'].values
     # refernce: https://github.com/eliberis/parapred
-    # H1: 24-34; H2: 50-56; H3: 89-97 ; 11 + 7 + 9 + (4 * 3) = 39
-    # L1: 26-32; L2: 52-56; L3: 95-102; 7 + 5 + 8 + (4 * 3) = 32
+    # H1: 26-32; H2: 52-56; H3: 95-102; 7 + 5 + 8 + (4 * 3) = 32
+    # L1: 24-34; L2: 50-56; L3: 89-97 ; 11 + 7 + 9 + (4 * 3) = 39
     extra_index, distance = 2, 4.5
-    cdr_ranges = {'H1':[-extra_index + 24, 34 + extra_index], 'H2':[-extra_index + 50, 56 + extra_index], 'H3':[-extra_index + 89, 97 + extra_index],
-                  'L1':[-extra_index + 26, 32 + extra_index], 'L2':[-extra_index + 52, 56 + extra_index], 'L3':[-extra_index + 95, 102 + extra_index]}
+    cdr_ranges = {'H1':[-extra_index + 26, 32 + extra_index], 'H2':[-extra_index + 52, 56 + extra_index], 'H3':[-extra_index + 95, 102 + extra_index],
+                  'L1':[-extra_index + 24, 34 + extra_index], 'L2':[-extra_index + 50, 56 + extra_index], 'L3':[-extra_index + 89, 97  + extra_index]}
     
     ######################################## 1. from pdb to chain ########################################
+    print(f'1. from pdb to chain')
     for pdb_id, H_id, L_id, A_id in tqdm(zip(data_pdb, data_H, data_L, data_A), total=len(data_pdb)):
         
         # prepared pdb
@@ -162,6 +163,7 @@ if __name__ == '__main__':
             io.save(f'{data_path}/features/chain/{pdb_id}{chain_id}.pdb')
 
     ######################################## 2. from chain to fasta ########################################
+    print(f'2. from chain to fasta')
     for pdb_id, H_id, L_id in tqdm(zip(data_pdb, data_H, data_L), total=len(data_pdb)):
         
         for record in SeqIO.parse(f'{data_path}/features/chain/{pdb_id}{H_id}.pdb', 'pdb-atom'):
@@ -177,6 +179,7 @@ if __name__ == '__main__':
                     fw.write("".join(list(record.seq)) + '\n')
     
     ####################################### 3. from fasta to check pssm, hmm and spd33 ########################################
+    print(f'3. from fasta to check pssm, hmm and spd33')
     for name in tqdm(os.listdir(f'{data_path}/features/fasta')):
         name = name.split('.')[0]
         pdb_id, chain_id = name[:-1], name[-1]
@@ -198,6 +201,7 @@ if __name__ == '__main__':
             continue
 
     ######################################## 4. construct label ########################################
+    print(f'4. construct label')
     for pdb_id, H_id, L_id, A_id in tqdm(zip(data_pdb, data_H, data_L, data_A), total=len(data_pdb)):
         
         # prepared pdb
@@ -292,7 +296,7 @@ if __name__ == '__main__':
             fw.write("".join(L_label) + '\n')
         
     ######################################## 5. construct concatenate cdrs ########################################
-    
+    print(f'5. construct concatenate cdrs')
     with open(f'{data_path}/total_277.fasta', 'w') as fw:
         
         for pdb_id, H_id, L_id in tqdm(zip(data_pdb, data_H, data_L), total=len(data_pdb)):

@@ -116,6 +116,7 @@ if __name__ == "__main__":
     max_array = [float('-inf') for _ in range(64)]
     
     # calculate min max
+    print(f'calculate features min max dimensions')
     for name in tqdm(names_list):
         node_features = np.load(f'{result_path}/features/node_features/{name}.npy')
     
@@ -135,6 +136,7 @@ if __name__ == "__main__":
     max_array = np.load(f'{result_path}/features/max_array.npy')
     
     # construct graph
+    print(f'construct graph')
     graph_dict = dict()
     for name in tqdm(names_list):
         cdrs = np.load(f'{result_path}/features/embedding/{name}.npy')
