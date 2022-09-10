@@ -40,11 +40,11 @@ parser.add_argument('--learning_rate', type=float, default=1e-4,
                     help='The learning rate of ADAM optimization.')
 parser.add_argument('--max_epochs', type=int, default=30,
                     help='The maximum epoch of training')
-parser.add_argument('--batch_size', type=int, default=8,
+parser.add_argument('--batch_size', type=int, default=16,
                     help='The batch size')
 parser.add_argument('--result_path', type=str, default='./result',
                     help='The name of result path, for logs, predictions, best models, etc.')
-parser.add_argument('--run_fold', type=int, default=0,
+parser.add_argument('--run_fold', type=int, default=0, choices=[1, 2, 3, 4, 5],
                     help='The parallel running fold')
 # dataset setting
 parser.add_argument('--data_path', type=str, default='./data/preprocess',
@@ -56,9 +56,9 @@ parser.add_argument('--split_type', type=str, default='scaffold',
 parser.add_argument('--resplit', action='store_true', default=False,
                     help="resplit the dataset with different comments")
 # model setting
-parser.add_argument('--hidden_features_dim', type=int, default=256,
+parser.add_argument('--hidden_features_dim', type=int, default=128,
                     help='the hidden features dimension')
-parser.add_argument('--num_MHSA_layers', type=int, default=3,
+parser.add_argument('--num_MHSA_layers', type=int, default=2,
                     help="the number of encoder layers")
 parser.add_argument('--num_attention_heads', type=int, default=4,
                     help="the number of attention heads")
@@ -68,6 +68,8 @@ parser.add_argument('--num_Generator_layers', type=int, default=2,
                     help="the number of generator layers")
 parser.add_argument('--dropout', type=int, default=0.2,
                     help="the dropout rate")
+parser.add_argument('--scale_norm', action='store_true', default=False,
+                    help='whether use scale norm')
 # args executing
 args = parser.parse_args()
 for arg in vars(args):
@@ -184,7 +186,7 @@ if __name__ == '__main__':
     # model
     model = CoMPT(hidden_features=args.hidden_features_dim, output_features=args.task_number,
                   num_MHSA_layers=args.num_MHSA_layers, num_attention_heads=args.num_attention_heads,
-                  num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout).to(device)
+                  num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout, scale_norm=args.scale_norm).to(device)
     
     # optimizer, scheduler
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)

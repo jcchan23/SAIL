@@ -65,6 +65,8 @@ parser.add_argument('--num_Generator_layers', type=int, default=2,
                     help="the number of generator layers")
 parser.add_argument('--dropout', type=int, default=0.1,
                     help="the dropout rate")
+parser.add_argument('--scale_norm', action='store_true', default=False,
+                    help='whether use scale norm')
 # args executing
 args = parser.parse_args()
 for arg in vars(args):
@@ -135,7 +137,7 @@ if __name__ == '__main__':
     # model
     model = CoMPT(hidden_features=args.hidden_features_dim, output_features=args.task_number,
                   num_MHSA_layers=args.num_MHSA_layers, num_attention_heads=args.num_attention_heads,
-                  num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout).to(device)
+                  num_FFN_layers=args.num_FFN_layers, num_Generator_layers=args.num_Generator_layers, dropout=args.dropout, scale_norm=args.scale_norm).to(device)
     
     # optimizer, scheduler
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)

@@ -179,7 +179,7 @@ def attention(query, key, value, batch_distance_matrix, batch_mask, dropout):
     h, d = query.shape[1], query.shape[-1]
     
     out_scores = torch.einsum('b h m d, b h m n d -> b h m n', query, key) / math.sqrt(d)
-    in_scores = torch.einsum('b h m d, b h m n d -> b h n m', query, key) / math.sqrt(d)
+    in_scores = torch.einsum('b h n d, b h m n d -> b h n m', query, key) / math.sqrt(d)
     
     if batch_mask is not None:
         batch_mask = repeat(batch_mask, 'b m -> b h c m', h=h, c=batch_mask.shape[-1])
